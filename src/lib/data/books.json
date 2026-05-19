@@ -436,5 +436,16 @@
     "price": 20,
     "isBestseller": true,
     "synopsis": "Dois jovens amantes desafiam famílias rivais em Verona — paixão instantânea e destino trágico. A tragédia universal de Shakespeare sobre amor e ódio."
+  },
+  {
+    "id": "43",
+    "slug": "one-piece-vol-1",
+    "title": "Mangá One Piece Vol.1",
+    "author": "Eichiro Oda",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/one-piece.jpeg",
+    "price": 20,
+    "isBestseller": true,
+    "synopsis": "Pirata que estica"
   }
 ]
