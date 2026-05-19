@@ -28,14 +28,7 @@
   left: -20%;
   right: -20%;
   height: 42%;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    color-mix(in oklch, var(--brand-teal) 22%, transparent) 35%,
-    color-mix(in oklch, var(--brand-orange) 28%, transparent) 50%,
-    color-mix(in oklch, var(--brand-teal) 18%, transparent) 65%,
-    transparent 100%
-  );
+  background: var(--scan-beam-gradient);
   filter: blur(6px);
   animation: catalog-recalibrate-scan-beam 0.68s cubic-bezier(0.45, 0, 0.2, 1)
     forwards;

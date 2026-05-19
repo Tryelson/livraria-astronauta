@@ -1,21 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Compass, Orbit, Rocket, Sparkles, Star } from "lucide-react";
+import { BookOpen, Compass, Orbit, Sparkles } from "lucide-react";
 import { Drawer } from "@/components/ui/drawer";
 import { CategoryOrbitCard } from "@/components/catalog/category-orbit-card";
 import { books, categories } from "@/lib/books";
 import { categoryBookCounts } from "@/lib/category-stats";
+import { categoryNavQuickLinks } from "@/lib/site-links";
 import { cn } from "@/lib/utils";
 
-export const categoryNavQuickLinks = [
-  { href: "/catalogo", label: "Catálogo", icon: BookOpen },
-  { href: "/#destaques", label: "Destaques", icon: Star },
-  { href: "/#mais-vendidos", label: "Mais vendidos", icon: Rocket },
-  { href: "/busca?q=autor", label: "Autores", icon: Compass },
-  { href: "/categoria/historia", label: "Editoras" },
-  { href: "/categoria/literatura", label: "Novidades" },
-] as const;
+export { categoryNavQuickLinks };
 
 type CategoryNavDrawerProps = {
   open: boolean;

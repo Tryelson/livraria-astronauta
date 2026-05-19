@@ -62,7 +62,6 @@ export function BookFilters({
     showCategoryFilter,
   });
 
-  const categoryActive = showCategoryFilter && categorySlugs.length > 0;
   const sortActive = sort !== defaultSort;
   const SortIcon = SORT_ICONS[sort] ?? ArrowDownUp;
 

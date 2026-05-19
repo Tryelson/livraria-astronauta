@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-
-const INTRO_PLAY_MS = 1400;
-const INTRO_EXIT_MS = 650;
+import { SITE_INTRO } from "@/lib/motion-config";
 
 /**
  * Avança data-intro (active → exiting → done) a cada carregamento.
@@ -16,11 +14,11 @@ export function SiteIntroController() {
 
     const exitTimer = window.setTimeout(() => {
       root.dataset.intro = "exiting";
-    }, INTRO_PLAY_MS);
+    }, SITE_INTRO.playMs);
 
     const doneTimer = window.setTimeout(() => {
       root.dataset.intro = "done";
-    }, INTRO_PLAY_MS + INTRO_EXIT_MS);
+    }, SITE_INTRO.playMs + SITE_INTRO.exitMs);
 
     return () => {
       window.clearTimeout(exitTimer);

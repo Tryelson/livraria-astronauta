@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { CatalogPageShell } from "@/components/catalog/catalog-page-shell";
 import { CatalogResults } from "@/components/catalog/catalog-results";
-import { BackButton } from "@/components/layout/back-button";
 import {
   filterBooksByCategorySlugs,
   searchBooks,
@@ -26,16 +26,10 @@ export function SearchCatalog({ query }: SearchCatalogProps) {
   }, [query, sort, categorySlugs]);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <BackButton href="/" className="mb-4" />
-      <header className="mb-6">
-        <h1 className="text-2xl font-bold">
-          {query ? `Resultados para “${query}”` : "Busca"}
-        </h1>
-        <p className="mt-2 text-muted-foreground">
-          {filtered.length} livro(s) encontrado(s)
-        </p>
-      </header>
+    <CatalogPageShell
+      title={query ? `Resultados para “${query}”` : "Busca"}
+      description={`${filtered.length} livro(s) encontrado(s)`}
+    >
       <CatalogResults
         books={filtered}
         categorySlugs={categorySlugs}
@@ -43,6 +37,6 @@ export function SearchCatalog({ query }: SearchCatalogProps) {
         onSortChange={setSort}
         onCategorySlugsChange={setCategorySlugs}
       />
-    </div>
+    </CatalogPageShell>
   );
 }

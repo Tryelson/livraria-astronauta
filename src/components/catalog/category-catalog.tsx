@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { CatalogPageShell } from "@/components/catalog/catalog-page-shell";
 import { CatalogResults } from "@/components/catalog/catalog-results";
-import { BackButton } from "@/components/layout/back-button";
 import {
   books as allBooks,
   filterBooksByCategorySlugs,
@@ -36,14 +36,7 @@ export function CategoryCatalog({
   }, [categorySlugs, sort]);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
-      <BackButton href="/" className="mb-4" />
-      <header className="mb-6">
-        <h1 className="text-2xl font-bold">{title}</h1>
-        {description && (
-          <p className="mt-2 text-muted-foreground">{description}</p>
-        )}
-      </header>
+    <CatalogPageShell title={title} description={description}>
       <CatalogResults
         books={filtered}
         categorySlugs={categorySlugs}
@@ -52,6 +45,6 @@ export function CategoryCatalog({
         onSortChange={setSort}
         defaultSort={DEFAULT_SORT}
       />
-    </div>
+    </CatalogPageShell>
   );
 }

@@ -1,10 +1,7 @@
-"use client";
-
 import { BookCoverImage } from "@/components/catalog/book-cover-image";
+import { BookCardAddButton } from "@/components/catalog/book-card-add-button";
 import Link from "next/link";
-import { Rocket, ShoppingBag, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useCart } from "@/context/cart-context";
+import { Rocket, Sparkles } from "lucide-react";
 import { formatPrice } from "@/lib/format";
 import type { Book } from "@/types/book";
 import { cn } from "@/lib/utils";
@@ -15,7 +12,6 @@ type BookCardProps = {
 };
 
 export function BookCard({ book, className }: BookCardProps) {
-  const { addItem } = useCart();
   const highDiscount = (book.discountPercent ?? 0) >= 40;
 
   return (
@@ -81,16 +77,7 @@ export function BookCard({ book, className }: BookCardProps) {
           </span>
         </div>
 
-        <Button
-          type="button"
-          size="sm"
-          variant="ghost"
-          className="book-card__cta"
-          onClick={() => addItem(book)}
-        >
-          <ShoppingBag className="size-3.5" aria-hidden />
-          Adicionar
-        </Button>
+        <BookCardAddButton book={book} />
       </div>
     </article>
   );

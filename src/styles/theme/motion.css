@@ -1,0 +1,13 @@
+/* Tokens e keyframes compartilhados de motion */
+:root {
+  --ease-emphasis: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-sharp: cubic-bezier(0.45, 0, 0.2, 1);
+  --scan-beam-gradient: linear-gradient(
+    180deg,
+    transparent 0%,
+    color-mix(in oklch, var(--brand-teal) 22%, transparent) 35%,
+    color-mix(in oklch, var(--brand-orange) 28%, transparent) 50%,
+    color-mix(in oklch, var(--brand-teal) 18%, transparent) 65%,
+    transparent 100%
+  );
+}

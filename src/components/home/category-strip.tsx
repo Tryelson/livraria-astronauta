@@ -1,4 +1,5 @@
 import { CategoryOrbitCard } from "@/components/catalog/category-orbit-card";
+import { PageContainer } from "@/components/layout/page-container";
 import { categories } from "@/lib/books";
 import { categoryBookCounts } from "@/lib/category-stats";
 import { Compass } from "lucide-react";
@@ -6,7 +7,7 @@ import { Compass } from "lucide-react";
 export function CategoryStrip() {
   return (
     <section className="px-4 py-8 md:px-6">
-      <div className="mx-auto max-w-7xl">
+      <PageContainer variant="section">
         <div className="mb-5 flex items-center gap-2">
           <Compass className="size-5 text-brand-teal" aria-hidden />
           <h2 className="text-lg font-bold text-foreground">
@@ -23,7 +24,7 @@ export function CategoryStrip() {
             </li>
           ))}
         </ul>
-      </div>
+      </PageContainer>
     </section>
   );
 }

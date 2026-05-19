@@ -1,30 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { CartTrigger } from "@/components/cart/cart-trigger";
 import { SearchBar } from "@/components/catalog/search-bar";
+import { LogoMark } from "@/components/layout/logo-mark";
 import { SiteNav } from "@/components/layout/site-nav";
 import { StoreWordmark } from "@/components/layout/store-wordmark";
-import { STORE_LOGO_PATH, STORE_NAME, STORE_PHONE } from "@/lib/config";
-
-function LogoMark({ size = "md" }: { size?: "sm" | "md" }) {
-  const dim = size === "sm" ? "size-10 sm:size-11" : "size-12";
-  return (
-    <span
-      className={`relative ${dim} shrink-0 overflow-hidden rounded-full border border-brand-orange/60 bg-card shadow-[0_0_20px_oklch(0.72_0.17_52/0.25)] ring-2 ring-brand-orange/20`}
-    >
-      <Image
-        src={STORE_LOGO_PATH}
-        alt=""
-        fill
-        sizes="48px"
-        className="object-cover"
-        priority
-      />
-    </span>
-  );
-}
+import { STORE_NAME, STORE_PHONE } from "@/lib/config";
 
 export function SiteHeader() {
   return (
@@ -40,14 +22,13 @@ export function SiteHeader() {
 
       <div className="relative mx-auto max-w-7xl px-4 py-4 md:px-6 md:py-5">
         <div className="relative z-10 flex flex-col gap-3 md:gap-4">
-          {/* Mobile / tablet */}
           <div className="flex items-center justify-between gap-3 lg:hidden">
             <Link
               href="/"
               aria-label={STORE_NAME}
               className="flex min-w-0 items-center gap-2.5 sm:gap-3"
             >
-              <LogoMark size="sm" />
+              <LogoMark size="sm" priority />
               <StoreWordmark size="compact" />
             </Link>
             <CartTrigger />
@@ -55,14 +36,13 @@ export function SiteHeader() {
 
           <SearchBar className="w-full lg:hidden" />
 
-          {/* Desktop */}
           <div className="hidden items-center gap-5 lg:flex">
             <Link
               href="/"
               aria-label={STORE_NAME}
               className="group flex shrink-0 items-center gap-3.5"
             >
-              <LogoMark />
+              <LogoMark priority />
               <StoreWordmark className="transition-opacity group-hover:opacity-90" />
             </Link>
             <SearchBar className="min-w-0 flex-1" />

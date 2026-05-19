@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { AnimatedBookGrid } from "@/components/catalog/animated-book-grid";
+import { BookGrid } from "@/components/catalog/book-grid";
 import { BookFilters } from "@/components/catalog/book-filters";
 import { useCatalogRecalibrate } from "@/hooks/use-catalog-recalibrate";
 import { DEFAULT_SORT } from "@/lib/filter-labels";
@@ -67,7 +67,7 @@ export function CatalogResults({
           </div>
         )}
 
-        <AnimatedBookGrid books={books} phase={phase} />
+        <BookGrid books={books} phase={phase} />
       </div>
     </>
   );

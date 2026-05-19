@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCartButton } from "@/components/catalog/add-to-cart-button";
 import { BackButton } from "@/components/layout/back-button";
+import { PageContainer } from "@/components/layout/page-container";
 import { Badge } from "@/components/ui/badge";
 import {
   getAllBookSlugs,
@@ -38,7 +39,7 @@ export default async function BookPage({ params }: PageProps) {
   const highDiscount = (book.discountPercent ?? 0) >= 40;
 
   return (
-    <article className="mx-auto max-w-7xl px-4 py-8 md:px-6">
+    <PageContainer as="article">
       <BackButton
         href={category ? `/categoria/${category.slug}` : "/"}
         className="mb-6"
@@ -109,6 +110,6 @@ export default async function BookPage({ params }: PageProps) {
           )}
         </div>
       </div>
-    </article>
+    </PageContainer>
   );
 }

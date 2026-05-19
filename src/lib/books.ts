@@ -5,6 +5,20 @@ import type { Book, Category, SortOption } from "@/types/book";
 export const books: Book[] = booksData as Book[];
 export const categories: Category[] = categoriesData as Category[];
 
+const bookIdsByCategorySlug = new Map<string, Set<string>>();
+
+function getBookIdsForCategory(categorySlug: string): Set<string> {
+  const cached = bookIdsByCategorySlug.get(categorySlug);
+  if (cached) return cached;
+
+  const ids = new Set<string>();
+  for (const book of getBooksByCategory(categorySlug)) {
+    ids.add(book.id);
+  }
+  bookIdsByCategorySlug.set(categorySlug, ids);
+  return ids;
+}
+
 export function getBookBySlug(slug: string): Book | undefined {
   return books.find((b) => b.slug === slug);
 }
@@ -31,8 +45,8 @@ export function filterBooksByCategorySlugs(
 
   const allowedIds = new Set<string>();
   for (const slug of categorySlugs) {
-    for (const book of getBooksByCategory(slug)) {
-      allowedIds.add(book.id);
+    for (const id of getBookIdsForCategory(slug)) {
+      allowedIds.add(id);
     }
   }
 

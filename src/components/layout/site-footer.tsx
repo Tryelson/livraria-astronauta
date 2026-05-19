@@ -5,22 +5,7 @@ import {
   STORE_NAME,
   STORE_PHONE,
 } from "@/lib/config";
-
-const siteMapLinks = [
-  { href: "/catalogo", label: "Catálogo completo" },
-  { href: "/#destaques", label: "Destaques" },
-  { href: "/#mais-vendidos", label: "Mais vendidos" },
-  { href: "/categoria/literatura", label: "Literatura" },
-  { href: "/categoria/filosofia", label: "Filosofia" },
-  { href: "/categoria/ofertas", label: "Ofertas" },
-];
-
-const infoLinks = [
-  { href: "/sobre", label: "Sobre a Livraria Astronauta" },
-  { href: "/sobre#entregas", label: "Despacho e entregas" },
-  { href: "/sobre#privacidade", label: "Política de privacidade" },
-  { href: "/sobre#trocas", label: "Trocas e devoluções" },
-];
+import { infoLinks, siteMapLinks } from "@/lib/site-links";
 
 export function SiteFooter() {
   return (

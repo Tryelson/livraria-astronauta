@@ -4,6 +4,9 @@ export const WHATSAPP_NUMBER =
 
 export const STORE_NAME = "Livraria Astronauta";
 
+/** Exibe a animação de abertura em todo carregamento completo da página */
+export const SITE_INTRO_ON_EVERY_LOAD = true;
+
 /** Quantidade mínima de livros no carrinho para o desconto */
 export const CART_PROMO_MIN_BOOKS = 3;
 

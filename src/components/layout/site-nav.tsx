@@ -3,10 +3,8 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import {
-  CategoryNavDrawer,
-  categoryNavQuickLinks,
-} from "@/components/layout/category-nav-drawer";
+import { CategoryNavDrawer } from "@/components/layout/category-nav-drawer";
+import { categoryNavQuickLinks } from "@/lib/site-links";
 import { cn } from "@/lib/utils";
 
 export function SiteNav() {

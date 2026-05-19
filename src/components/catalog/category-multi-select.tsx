@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Check, ChevronDown, Tag } from "lucide-react";
 import { categories } from "@/lib/books";
 import { getCategorySelectionLabel } from "@/lib/filter-labels";
+import { useFloatingPanel } from "@/hooks/use-floating-panel";
 import type { RecalibratePhase } from "@/hooks/use-catalog-recalibrate";
 import { cn } from "@/lib/utils";
 
@@ -14,72 +15,26 @@ type CategoryMultiSelectProps = {
   recalibratePhase?: RecalibratePhase;
 };
 
-type PanelPosition = {
-  top: number;
-  left: number;
-  width: number;
-};
-
 export function CategoryMultiSelect({
   value,
   onChange,
   recalibratePhase = "idle",
 }: CategoryMultiSelectProps) {
   const [open, setOpen] = useState(false);
-  const [panelPosition, setPanelPosition] = useState<PanelPosition | null>(
-    null,
-  );
   const triggerRef = useRef<HTMLButtonElement>(null);
   const rootRef = useRef<HTMLDivElement>(null);
   const listId = useId();
 
   const isOpen = open && recalibratePhase === "idle";
+  const close = useCallback(() => setOpen(false), []);
 
-  function updatePanelPosition() {
-    const trigger = triggerRef.current;
-    if (!trigger) return;
-    const rect = trigger.getBoundingClientRect();
-    setPanelPosition({
-      top: rect.bottom + 6,
-      left: rect.left,
-      width: rect.width,
-    });
-  }
-
-  useLayoutEffect(() => {
-    if (!isOpen) return;
-
-    updatePanelPosition();
-    window.addEventListener("resize", updatePanelPosition);
-    window.addEventListener("scroll", updatePanelPosition, true);
-    return () => {
-      window.removeEventListener("resize", updatePanelPosition);
-      window.removeEventListener("scroll", updatePanelPosition, true);
-    };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) return;
-
-    function handlePointerDown(event: PointerEvent) {
-      const target = event.target as Node;
-      if (rootRef.current?.contains(target)) return;
-      const panel = document.getElementById(listId);
-      if (panel?.contains(target)) return;
-      setOpen(false);
-    }
-
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") setOpen(false);
-    }
-
-    document.addEventListener("pointerdown", handlePointerDown);
-    document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("pointerdown", handlePointerDown);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, listId]);
+  const { position: panelPosition } = useFloatingPanel({
+    isOpen,
+    onClose: close,
+    triggerRef,
+    rootRef,
+    panelId: listId,
+  });
 
   function toggle(slug: string) {
     if (value.includes(slug)) {
