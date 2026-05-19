@@ -1,0 +1,54 @@
+@media (prefers-reduced-motion: reduce) {
+  [data-sonner-toast].astronaut-toast {
+    animation: none !important;
+  }
+
+  [data-sonner-toast].astronaut-toast--cart .astronaut-toast-icon {
+    animation: none !important;
+  }
+
+  .galaxy-nebula,
+  .galaxy-stars,
+  .galaxy-shooting-star {
+    animation: none !important;
+  }
+
+  .book-card:hover {
+    transform: none;
+  }
+
+  .book-card:hover .book-card__frame,
+  .book-card:hover .book-card__cover-img {
+    animation: none !important;
+    transform: none;
+  }
+
+  .cart-drawer__checkout:hover {
+    transform: none;
+  }
+
+  .hero-banner:hover .hero-banner__cover,
+  .hero-banner:hover .hero-banner__orbit--a {
+    animation: none !important;
+    transform: none;
+  }
+
+  .back-button,
+  .back-button__orbit,
+  .back-button__glow,
+  .back-button__arrow,
+  .back-button__spark {
+    animation: none !important;
+  }
+
+  .back-button__shine,
+  .back-button__shine--active {
+    display: none;
+  }
+
+  .animate-floating-cart-enter,
+  .animate-floating-cart-pulse {
+    animation: none !important;
+    transition: opacity 0.2s ease;
+  }
+}

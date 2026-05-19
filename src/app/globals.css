@@ -1,26 +1,26 @@
+/**
+ * Entrada global de estilos — Livraria Astronauta
+ *
+ * Ordem: Tailwind/shadcn → tema (:root) → base → layout → componentes → reduced-motion
+ * Estilos de componente: src/styles/components/<nome>.css
+ */
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@import "../styles/theme/tokens.css";
+@import "../styles/theme/tailwind-theme.css";
+@import "../styles/theme/utilities.css";
+@import "../styles/base/reset.css";
+@import "../styles/base/cursors.css";
+@import "../styles/layout/galaxy.css";
+@import "../styles/components/back-button.css";
+@import "../styles/components/book-card.css";
+@import "../styles/components/hero-carousel.css";
+@import "../styles/components/mission-strip.css";
+@import "../styles/components/category-pill.css";
+@import "../styles/components/cart-drawer.css";
+@import "../styles/components/toast.css";
+@import "../styles/base/reduced-motion.css";

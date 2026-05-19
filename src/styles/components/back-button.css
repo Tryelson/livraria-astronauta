@@ -1,0 +1,238 @@
+/* Botão Voltar — destaque + animação “órbita” */
+@keyframes back-button-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes back-button-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes back-button-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes back-button-shine-sweep {
+  0% {
+    background-position: 150% 0;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.75;
+  }
+  88% {
+    opacity: 0.75;
+  }
+  100% {
+    background-position: -50% 0;
+    opacity: 0;
+  }
+}
+
+@keyframes back-button-arrow-launch {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-0.35rem);
+  }
+  70% {
+    transform: translateX(0.1rem);
+  }
+}
+
+@keyframes back-button-sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.back-button {
+  border: 2px solid color-mix(in oklch, var(--brand-orange) 55%, transparent);
+  background: color-mix(in oklch, var(--card) 88%, transparent);
+  color: var(--brand-cream);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--brand-teal) 25%, transparent),
+    0 4px 24px color-mix(in oklch, var(--brand-orange) 22%, transparent),
+    0 0 40px color-mix(in oklch, var(--brand-orange) 12%, transparent);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
+  animation: back-button-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.back-button:hover {
+  border-color: color-mix(in oklch, var(--brand-orange) 85%, white);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--brand-teal) 45%, transparent),
+    0 6px 28px color-mix(in oklch, var(--brand-orange) 38%, transparent),
+    0 0 56px color-mix(in oklch, var(--brand-orange) 22%, transparent);
+}
+
+.back-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.back-button:focus-visible {
+  outline: 2px solid var(--brand-orange);
+  outline-offset: 3px;
+}
+
+.back-button__orbit {
+  pointer-events: none;
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    color-mix(in oklch, var(--brand-orange) 90%, white) 70deg,
+    transparent 140deg,
+    color-mix(in oklch, var(--brand-teal) 80%, white) 220deg,
+    transparent 300deg
+  );
+  opacity: 0.55;
+  animation: back-button-orbit-spin 4s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+.back-button__glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 2px;
+  z-index: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse 90% 140% at 50% 50%,
+    color-mix(in oklch, var(--brand-orange) 28%, transparent),
+    transparent 70%
+  );
+  transition: opacity 0.25s ease;
+}
+
+.back-button:hover .back-button__glow {
+  opacity: 1;
+  animation: back-button-glow-pulse 2.8s ease-in-out infinite;
+}
+
+.back-button__shine {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  visibility: hidden;
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklch, white 28%, transparent) 42%,
+    color-mix(in oklch, white 38%, transparent) 50%,
+    color-mix(in oklch, white 28%, transparent) 58%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  background-position: 150% 0;
+  background-repeat: no-repeat;
+}
+
+.back-button__shine--active {
+  visibility: visible;
+  animation: back-button-shine-sweep 0.7s ease-out both;
+}
+
+.back-button__arrow {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--brand-orange);
+  filter: drop-shadow(
+    0 0 6px color-mix(in oklch, var(--brand-orange) 60%, transparent)
+  );
+  transition:
+    color 0.2s ease,
+    filter 0.2s ease;
+}
+
+.back-button:hover .back-button__arrow {
+  color: white;
+  animation: back-button-arrow-launch 0.65s ease-in-out;
+}
+
+.back-button__spark {
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--brand-cream);
+  box-shadow: 0 0 8px var(--brand-orange);
+  opacity: 0;
+}
+
+.back-button:hover .back-button__spark {
+  animation: back-button-sparkle 0.9s ease-in-out infinite;
+}
+
+.back-button__spark--1 {
+  top: 22%;
+  right: 14%;
+}
+
+.back-button__spark--2 {
+  bottom: 20%;
+  right: 28%;
+  animation-delay: 0.15s;
+}
+
+.back-button__spark--3 {
+  top: 38%;
+  left: 18%;
+  width: 3px;
+  height: 3px;
+  animation-delay: 0.3s;
+}
+

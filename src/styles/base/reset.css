@@ -1,0 +1,14 @@
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: dark;
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-transparent text-foreground;
+    overflow-x: clip;
+  }
+}

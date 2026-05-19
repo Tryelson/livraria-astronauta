@@ -1,0 +1,214 @@
+/* ——— Toast (Sonner) — tema espacial ——— */
+@keyframes astronaut-toast-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes astronaut-toast-icon-pulse {
+  0%,
+  100% {
+    filter: drop-shadow(
+      0 0 6px color-mix(in oklch, var(--brand-orange) 50%, transparent)
+    );
+  }
+  50% {
+    filter: drop-shadow(
+      0 0 14px color-mix(in oklch, var(--brand-orange) 75%, transparent)
+    );
+  }
+}
+
+[data-sonner-toaster].astronaut-toaster {
+  --width: 22rem;
+  --toast-close-button-start: unset;
+  --toast-close-button-end: 0.75rem;
+  --toast-close-button-transform: none;
+  font-family: var(--font-sans);
+}
+
+/* Sonner empilha toasts colapsados com filhos em opacity:0 — esconder casca vazia */
+[data-sonner-toast].astronaut-toast[data-expanded="false"][data-front="false"] {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+[data-sonner-toast].astronaut-toast {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: var(--width);
+  padding: 0.875rem 2.75rem 0.875rem 1rem !important;
+  border-radius: calc(var(--radius) * 1.4) !important;
+  border: 1px solid color-mix(in oklch, var(--brand-teal) 35%, transparent) !important;
+  background: linear-gradient(
+    145deg,
+    color-mix(in oklch, var(--card) 94%, transparent),
+    color-mix(in oklch, var(--background) 88%, transparent)
+  ) !important;
+  color: var(--brand-cream) !important;
+  box-shadow:
+    0 1px 0 color-mix(in oklch, white 7%, transparent) inset,
+    0 0 0 1px color-mix(in oklch, var(--brand-teal) 18%, transparent),
+    0 12px 40px color-mix(in oklch, black 45%, transparent),
+    0 0 32px color-mix(in oklch, var(--brand-orange) 12%, transparent) !important;
+  backdrop-filter: blur(14px);
+}
+
+[data-sonner-toast].astronaut-toast[data-mounted="true"][data-front="true"] {
+  animation: astronaut-toast-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+[data-sonner-toast].astronaut-toast::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background:
+    radial-gradient(circle at 12% 28%, white 0.5px, transparent 0.6px),
+    radial-gradient(circle at 88% 72%, white 0.45px, transparent 0.55px),
+    radial-gradient(
+      ellipse 80% 60% at 100% 0%,
+      color-mix(in oklch, var(--brand-teal) 20%, transparent),
+      transparent 55%
+    );
+}
+
+[data-sonner-toast].astronaut-toast--cart {
+  border-color: color-mix(
+    in oklch,
+    var(--brand-orange) 45%,
+    transparent
+  ) !important;
+  box-shadow:
+    0 1px 0 color-mix(in oklch, white 8%, transparent) inset,
+    0 0 0 1px color-mix(in oklch, var(--brand-orange) 25%, transparent),
+    0 12px 40px color-mix(in oklch, black 45%, transparent),
+    0 0 40px color-mix(in oklch, var(--brand-orange) 22%, transparent) !important;
+}
+
+[data-sonner-toast].astronaut-toast[data-expanded="true"] {
+  margin-bottom: 2px;
+}
+
+[data-sonner-toast].astronaut-toast--cart .astronaut-toast-icon {
+  color: var(--brand-orange);
+  animation: astronaut-toast-icon-pulse 2s ease-in-out infinite;
+}
+
+[data-sonner-toast].astronaut-toast[data-type="error"] {
+  border-color: color-mix(
+    in oklch,
+    var(--destructive) 50%,
+    transparent
+  ) !important;
+  box-shadow:
+    0 12px 40px color-mix(in oklch, black 45%, transparent),
+    0 0 28px color-mix(in oklch, var(--destructive) 18%, transparent) !important;
+}
+
+[data-sonner-toast].astronaut-toast[data-type="error"] .astronaut-toast-icon {
+  color: var(--destructive);
+}
+
+.astronaut-toast-content {
+  position: relative;
+  z-index: 1;
+  gap: 0.125rem !important;
+}
+
+.astronaut-toast-title {
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  color: var(--brand-cream) !important;
+}
+
+.astronaut-toast-description {
+  font-size: 0.75rem !important;
+  line-height: 1.35 !important;
+  color: color-mix(
+    in oklch,
+    var(--brand-teal) 70%,
+    var(--muted-foreground)
+  ) !important;
+}
+
+.astronaut-toast-icon {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 2rem !important;
+  height: 2rem !important;
+  margin-right: 0.25rem !important;
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--brand-orange) 14%, transparent);
+  border: 1px solid color-mix(in oklch, var(--brand-orange) 35%, transparent);
+  color: var(--brand-orange);
+}
+
+[data-sonner-toast].astronaut-toast [data-close-button],
+.astronaut-toast-close {
+  position: absolute !important;
+  top: 0.625rem !important;
+  right: 0.625rem !important;
+  left: auto !important;
+  z-index: 3;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  border-radius: 9999px !important;
+  border: 1px solid color-mix(in oklch, var(--border) 80%, transparent) !important;
+  background: color-mix(in oklch, var(--muted) 50%, transparent) !important;
+  color: var(--muted-foreground) !important;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+[data-sonner-toast].astronaut-toast [data-close-button]:hover,
+.astronaut-toast-close:hover {
+  color: var(--brand-cream) !important;
+  border-color: color-mix(
+    in oklch,
+    var(--brand-orange) 40%,
+    transparent
+  ) !important;
+  background: color-mix(
+    in oklch,
+    var(--brand-orange) 15%,
+    transparent
+  ) !important;
+}
+
+.astronaut-toast-action,
+.astronaut-toast-cancel {
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+.astronaut-toast-action {
+  background: var(--brand-orange) !important;
+  color: var(--primary-foreground) !important;
+}
+
+.astronaut-toast-cancel {
+  border: 1px solid color-mix(in oklch, var(--border) 80%, transparent) !important;
+  background: transparent !important;
+  color: var(--brand-cream) !important;
+}

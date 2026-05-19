@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "ofertas",
+    "name": "Ofertas Livraria Astronauta!",
+    "description": "Os melhores descontos do universo literário."
+  },
+  {
+    "slug": "literatura",
+    "name": "Literatura",
+    "description": "Clássicos e contemporâneos para explorar novos mundos."
+  },
+  {
+    "slug": "conservadorismo",
+    "name": "Conservadorismo",
+    "description": "Obras sobre tradição, ordem e pensamento político."
+  },
+  {
+    "slug": "historia",
+    "name": "História",
+    "description": "História do Brasil, geral e civilizações."
+  },
+  {
+    "slug": "filosofia",
+    "name": "Filosofia",
+    "description": "Filosofia política, moral e pensadores clássicos."
+  }
+]

@@ -1,0 +1,440 @@
+[
+  {
+    "id": "1",
+    "slug": "os-trabalhadores-do-mar",
+    "title": "Os trabalhadores do mar",
+    "author": "Victor Hugo",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/os-trabalhadores-do-mar.jpeg",
+    "price": 40,
+    "isFeatured": true,
+    "isBestseller": true,
+    "synopsis": "Na costa da Bretanha, Gilliatt enfrenta o mar e a tempestade em uma prova extrema de coragem e abnegação. Um dos romances mais poderosos de Victor Hugo sobre o amor, o dever e a natureza em fúria."
+  },
+  {
+    "id": "2",
+    "slug": "colecao-especial-sherlock-holmes-6-livros",
+    "title": "Coleção especial Sherlock Holmes 6 livros",
+    "author": "Arthur Conan Doyle",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/sherlock-holmes-6-volumes-colecao-especial.jpeg",
+    "price": 120,
+    "isFeatured": true,
+    "isBestseller": true,
+    "synopsis": "Seis volumes reunindo as investigações do detetive mais famoso da literatura, com mistérios, dedução implacável e o incomparável dr. Watson ao lado de Sherlock Holmes."
+  },
+  {
+    "id": "3",
+    "slug": "deixe-me-ser-mulher",
+    "title": "Deixe-me ser mulher",
+    "author": "Elisabeth Elliot",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/deixe-me-ser-mulher-elisabeth-elliot.jpeg",
+    "price": 40,
+    "synopsis": "Memórias e reflexões de Elisabeth Elliot sobre fé, vocação e feminilidade, escritas com honestidade e profundidade espiritual após perdas que marcaram sua vida."
+  },
+  {
+    "id": "4",
+    "slug": "shackleton-uma-licao-de-coragem",
+    "title": "Shackleton, uma lição de coragem",
+    "author": "Alfred Lansing",
+    "categorySlug": "historia",
+    "coverUrl": "/livraria-images/shackleton-uma-licao-de-coragem.jpeg",
+    "price": 30,
+    "isFeatured": true,
+    "synopsis": "A épica expedição Antártica do Endurance e a luta pela sobrevivência de Shackleton e sua tripulação. Um relato real de liderança, resistência e esperança no gelo."
+  },
+  {
+    "id": "5",
+    "slug": "dracula",
+    "title": "Drácula",
+    "author": "Bram Stoker",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/bram-stoker-dracula.jpeg",
+    "price": 25,
+    "isBestseller": true,
+    "synopsis": "O conde Drácula deixa a Transilvânia para a Inglaterra, e um grupo se une para enfrentar o mal. O romance gótico que definiu o vampiro moderno e ainda arrepia gerações."
+  },
+  {
+    "id": "6",
+    "slug": "o-vermelho-e-o-negro",
+    "title": "O vermelho e o negro",
+    "author": "Stendhal",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/stendhal-o-vermelho-e-o-negro.jpeg",
+    "price": 50,
+    "synopsis": "Julien Sorel ambiciona subir na sociedade francesa do século XIX, entre paixão, hipocrisia e revolta. Obra-prima de Stendhal sobre desejo, classe e destino."
+  },
+  {
+    "id": "7",
+    "slug": "duas-coroas-retorcidas",
+    "title": "Duas coroas retorcidas",
+    "author": "Rachel Gillig",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/duas-coroas-retorcidas-rachel-gillig.jpeg",
+    "price": 55,
+    "isFeatured": true,
+    "synopsis": "Em um mundo de magia e mistério, duas coroas e segredos antigos colidem com o destino de quem ousa desafiar o império. Fantasia envolvente de Rachel Gillig."
+  },
+  {
+    "id": "8",
+    "slug": "a-rainha-vermelha",
+    "title": "A rainha vermelha",
+    "author": "Victoria Aveyard",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/a-rainha-vermelha.jpeg",
+    "price": 50,
+    "synopsis": "Mare Barrow vive em um reino dividido pelo sangue: vermelho comum, prateado poderoso. Uma distopia de coragem e rebelião no início da série que conquistou milhões de leitores."
+  },
+  {
+    "id": "9",
+    "slug": "quincas-borba",
+    "title": "Quincas Borba",
+    "author": "Machado de Assis",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/quincas-borba.jpeg",
+    "price": 25,
+    "synopsis": "Machado de Assis mistura sátira, filosofia e tragédia na história de Rubião e do excêntrico Quincas Borba. Um clássico brasileiro sobre ambição, loucura e humanidade."
+  },
+  {
+    "id": "10",
+    "slug": "um-conto-de-duas-cidades",
+    "title": "Um conto de duas cidades",
+    "author": "Charles Dickens",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/um-conto-de-duas-cidades.jpeg",
+    "price": 30,
+    "synopsis": "Paris e Londres no tempo do Terror: sacrifício, revolução e reencontros que mudam destinos. Um dos maiores romances históricos de Charles Dickens."
+  },
+  {
+    "id": "11",
+    "slug": "wicked-capa-dura",
+    "title": "Wicked capa dura",
+    "author": "Gregory Maguire",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/gregory-maguire-wicked-darkside.jpeg",
+    "price": 79.9,
+    "isFeatured": true,
+    "synopsis": "A história da Bruxa Má do Oeste antes de Dorothy chegar a Oz — política, preconceito e identidade em um reimaginar cult de Gregory Maguire. Edição em capa dura."
+  },
+  {
+    "id": "12",
+    "slug": "a-ciencia-do-sucesso",
+    "title": "A Ciência do sucesso",
+    "author": "Napoleon Hill",
+    "categorySlug": "filosofia",
+    "coverUrl": "/livraria-images/a-ciencia-do-sucesso.jpeg",
+    "price": 35,
+    "synopsis": "Princípios atemporais sobre metas, persistência e mentalidade vencedora que influenciaram gerações de empreendedores. O clássico de Napoleon Hill sobre realização pessoal."
+  },
+  {
+    "id": "13",
+    "slug": "a-menina-do-outro-lado",
+    "title": "A menina do outro lado",
+    "author": "Nagabe",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/a-menina-do-outro-lado-nagabe.jpeg",
+    "price": 55,
+    "isNew": true,
+    "synopsis": "Mangá tocante de Nagabe sobre uma menina misteriosa à beira do mundo dos vivos e dos mortos. Uma fábula visual sobre solidão, gentileza e o que nos une."
+  },
+  {
+    "id": "14",
+    "slug": "o-diario-de-anne-frank",
+    "title": "O diário de Anne Frank",
+    "author": "Anne Frank",
+    "categorySlug": "historia",
+    "coverUrl": "/livraria-images/o-diario-de-anne-frank.jpeg",
+    "price": 30,
+    "synopsis": "O relato íntimo da adolescente judia escondida na Amsterdam ocupada. Um documento histórico comovente sobre esperança, medo e a força das palavras."
+  },
+  {
+    "id": "15",
+    "slug": "a-falencia",
+    "title": "A falência",
+    "author": "Arthur Azevedo",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/a-falencia-texto-interal-questoes-de-vestibular-comentadas.jpeg",
+    "price": 25,
+    "synopsis": "Peça-chave do teatro brasileiro que expõe hipocrisia social e moral com humor ácido. Arthur Azevedo retrata o Rio do século XIX com naturalismo e ironia."
+  },
+  {
+    "id": "16",
+    "slug": "as-aventuras-de-pinoquio",
+    "title": "As aventuras de Pinóquio",
+    "author": "Carlo Collodi",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/as-aventuras-de-pinoquio-historia-de-um-boneco-carlo-collodi.jpeg",
+    "price": 40,
+    "synopsis": "O boneco de madeira que sonha em ser menino de verdade atravessa provações, mentiras e lições de coragem. O clássico de Collodi que encanta crianças e adultos."
+  },
+  {
+    "id": "17",
+    "slug": "kamen-rider-kuuga-manga",
+    "title": "Kamen Rider Kuuga mangá",
+    "author": "Masaomi Kanzaki",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/kamen-rider-kuuga.jpeg",
+    "price": 45,
+    "isNew": true,
+    "synopsis": "Adaptação em mangá da série icônica: um herói enfrenta criaturas aterrorizantes para proteger a humanidade. Ação, mistério e o legado de Kuuga em páginas."
+  },
+  {
+    "id": "18",
+    "slug": "arena-13",
+    "title": "Arena 13",
+    "author": "Joseph Delaney",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/arena-13-alguns-perdem-a-vida-outros-a-alma.jpeg",
+    "price": 40,
+    "synopsis": "Lec vive em um mundo de combates mortais nas arenas e sonha em vencer o sistema. Ficção científica visceral de Joseph Delaney sobre sobrevivência e revolta."
+  },
+  {
+    "id": "19",
+    "slug": "a-metamorfose",
+    "title": "A Metamorfose",
+    "author": "Franz Kafka",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/a-metamorfose-franz-kafka.jpeg",
+    "price": 20,
+    "synopsis": "Gregor Samsa acorda transformado em inseto e vê sua vida e sua família desmoronarem. Um dos textos mais perturbadores e influentes de Kafka sobre alienação e absurdo."
+  },
+  {
+    "id": "20",
+    "slug": "o-livro-de-ouro-da-mitologia",
+    "title": "O livro de ouro da mitologia",
+    "author": "Gustav Schwab",
+    "categorySlug": "historia",
+    "coverUrl": "/livraria-images/o-livro-de-ouro-da-mitologia-historias-de-deuses-e-herois.jpeg",
+    "price": 25,
+    "synopsis": "Deuses, heróis e lendas da Grécia e Roma reunidos em narrativas claras e envolventes. Um clássico para quem ama mitologia e as origens da cultura ocidental."
+  },
+  {
+    "id": "21",
+    "slug": "manual-de-assassinato-para-boas-garotas",
+    "title": "Manual de assassinato para boas garotas",
+    "author": "Holly Jackson",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/manual-de-assassinato-para-boas-garotas-holly-jackson.jpeg",
+    "price": 45,
+    "isNew": true,
+    "synopsis": "Pippa Fitz-Amobi reinvestiga um caso de assassinato em sua cidade e grava um podcast que pode expor a verdade — ou colocá-la em perigo. Thriller juvenil de Holly Jackson."
+  },
+  {
+    "id": "22",
+    "slug": "vidas-secas",
+    "title": "Vidas secas",
+    "author": "Graciliano Ramos",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/vidas-secas.jpeg",
+    "price": 20,
+    "synopsis": "A seca castiga o sertão e esmaga Fabiano, Sinhá Vitória e os filhos na luta pela sobrevivência. Obra-prima de Graciliano Ramos sobre miséria e dignidade."
+  },
+  {
+    "id": "23",
+    "slug": "o-jardim-secreto",
+    "title": "O jardim secreto",
+    "author": "Frances Hodgson Burnett",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/o-jardim-secreto.jpeg",
+    "price": 25,
+    "synopsis": "Mary Lennox descobre um jardim encerrado e, aos poucos, floresce junto com ele. Um clássico sobre infância, amizade e a força transformadora da natureza."
+  },
+  {
+    "id": "24",
+    "slug": "o-morro-dos-ventos-uivantes",
+    "title": "O morro dos ventos uivantes",
+    "author": "Emily Brontë",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/o-morro-dos-ventos-uivantes-emily-bronte.jpeg",
+    "price": 25,
+    "synopsis": "Paixão destrutiva entre Heathcliff e Catherine nos ermos da Inglaterra. Romance gótico intenso de Emily Brontë sobre amor, vingança e obsessão."
+  },
+  {
+    "id": "25",
+    "slug": "orgulho-e-preconceito",
+    "title": "Orgulho e preconceito",
+    "author": "Jane Austen",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/jane-austen-orgulho-e-preconceito.jpeg",
+    "price": 25,
+    "isBestseller": true,
+    "synopsis": "Elizabeth Bennet e Mr. Darcy atravessam mal-entendidos, ironia e convenções sociais. O romance mais amado de Jane Austen sobre amor e juízo."
+  },
+  {
+    "id": "26",
+    "slug": "o-medico-e-o-monstro",
+    "title": "O médico e o monstro",
+    "author": "Robert Louis Stevenson",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/o-medico-e-o-monstro.jpeg",
+    "price": 20,
+    "synopsis": "O dr. Jekyll liberta o lado monstruoso de sua personalidade em uma Londres sombria. O clássico de Stevenson que definiu o duplo na literatura."
+  },
+  {
+    "id": "27",
+    "slug": "o-pequeno-principe",
+    "title": "O pequeno príncipe",
+    "author": "Antoine de Saint-Exupéry",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/o-pequeno-principe-com-aquarelas-do-autor-antoine-de-saint-exupery.jpeg",
+    "price": 30,
+    "isBestseller": true,
+    "synopsis": "Um aviador perdido no deserto encontra um pequeno príncipe de outro planeta e redescobre o essencial da vida. Poético, delicado e atemporal."
+  },
+  {
+    "id": "28",
+    "slug": "crime-e-castigo",
+    "title": "Crime e castigo",
+    "author": "Fiódor Dostoiévski",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/crime-e-castigo-fiodor-dostoievski.jpeg",
+    "price": 25,
+    "isBestseller": true,
+    "synopsis": "Raskólnikov comete um assassinato e mergulha em angústia moral e psicológica. Dostoiévski em obra magistral sobre culpa, fé e redenção."
+  },
+  {
+    "id": "29",
+    "slug": "a-volta-ao-mundo-em-80-dias",
+    "title": "A volta ao mundo em 80 dias",
+    "author": "Júlio Verne",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/a-volta-ao-mundo-em-80-dias-julio-verne.jpeg",
+    "price": 25,
+    "isBestseller": true,
+    "synopsis": "Phileas Fogg aposta que dá a volta ao planeta em oitenta dias — trem, navio e elefante numa corrida contra o tempo. Aventura clássica de Júlio Verne."
+  },
+  {
+    "id": "30",
+    "slug": "macbeth",
+    "title": "Macbeth",
+    "author": "William Shakespeare",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/william-shakespeare-macbeth.jpeg",
+    "price": 20,
+    "synopsis": "Ambição, profecias e culpa destroem um guerreiro e um reino. A tragédia shakespeariana sobre o preço do poder, em linguagem intensa e inesquecível."
+  },
+  {
+    "id": "31",
+    "slug": "girl-crush-manga",
+    "title": "Girl Crush mangá",
+    "author": "Midori Tryane",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/girl-crush-midori-tryane.jpeg",
+    "price": 35,
+    "synopsis": "Romance e drama em formato mangá: sentimentos intensos, mal-entendidos e descobertas do coração. Uma leitura envolvente para quem ama histórias em quadrinhos japonesas."
+  },
+  {
+    "id": "32",
+    "slug": "tempo-de-regresso",
+    "title": "Tempo de regresso",
+    "author": "Kristin Hannah",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/kristin-hannah-tempo-de-regresso.jpeg",
+    "price": 40,
+    "synopsis": "Kristin Hannah narra memória, família e segundas chances diante de perdas e recomeços. Um romance emocionante sobre o tempo que cura — e o que não volta."
+  },
+  {
+    "id": "33",
+    "slug": "don-quixote",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/dom-quixote-miguel-de-cervantes.jpeg",
+    "price": 25,
+    "synopsis": "O cavaleiro da triste figura e Sancho Panza atravessam a Espanha lutando contra moinhos e sonhos. A obra fundadora do romance moderno, cômica e profunda."
+  },
+  {
+    "id": "34",
+    "slug": "a-coroa",
+    "title": "A coroa",
+    "author": "Kiera Cass",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/a-coroa-livro-5-da-serie-a-selecao-kiera-cass.jpeg",
+    "price": 39.9,
+    "isFeatured": true,
+    "synopsis": "O desfecho da série A Seleção: tronos, corações e escolhas finais no mundo de Kiera Cass. Quem será a rainha — e a quem pertencerá o amor verdadeiro?"
+  },
+  {
+    "id": "35",
+    "slug": "o-diario-de-anne-frank-edicao-de-luxo",
+    "title": "Edição de luxo O diário de Anne Frank",
+    "author": "Anne Frank",
+    "categorySlug": "historia",
+    "coverUrl": "/livraria-images/o-diario-de-anne-frank-garnier.jpeg",
+    "price": 50,
+    "synopsis": "Edição de luxo do diário que marcou o século XX, com acabamento especial para colecionadores e leitores que desejam guardar este testemunho com cuidado."
+  },
+  {
+    "id": "36",
+    "slug": "querido-john",
+    "title": "Querido John",
+    "author": "Nicholas Sparks",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/querido-john.jpeg",
+    "price": 40,
+    "synopsis": "Amor e distância se entrelaçam quando um soldado e uma jovem se correspondem. Nicholas Sparks em história sobre escolhas, saudade e o peso do destino."
+  },
+  {
+    "id": "37",
+    "slug": "o-seminarista",
+    "title": "O Seminarista",
+    "author": "Bernardo Guimarães",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/o-seminarista-bernardo-guimaraes.jpeg",
+    "price": 20,
+    "synopsis": "Romance do século XIX em que fé, paixão e convenções sociais se chocam no Brasil imperial. Bernardo Guimarães entre o melodrama e a crítica moral."
+  },
+  {
+    "id": "38",
+    "slug": "biblia-infantil",
+    "title": "Bíblia infantil",
+    "author": "Vários",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/biblia-infantil.jpeg",
+    "price": 30,
+    "synopsis": "Grandes histórias bíblicas contadas com linguagem acessível e ilustrações para aproximar crianças das narrativas de fé, coragem e esperança."
+  },
+  {
+    "id": "39",
+    "slug": "um-estudo-em-vermelho",
+    "title": "Um estudo em vermelho",
+    "author": "Arthur Conan Doyle",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/sherlock-holmes-um-estudo-em-vermelho.jpeg",
+    "price": 30,
+    "isBestseller": true,
+    "synopsis": "O primeiro caso de Sherlock Holmes: um mistério de sangue em Londres que apresenta o detetive e seu método. O ponto de partida perfeito para a saga."
+  },
+  {
+    "id": "40",
+    "slug": "o-imperio-do-bem",
+    "title": "O império do bem",
+    "author": "Philippe Muray",
+    "categorySlug": "conservadorismo",
+    "coverUrl": "/livraria-images/philippe-muray-o-imperio-do-bem.jpeg",
+    "price": 25,
+    "synopsis": "Ensaio provocador sobre a moralidade contemporânea, o politicamente correto e os limites da tolerância. Philippe Muray discute cultura e poder com ironia afiada."
+  },
+  {
+    "id": "41",
+    "slug": "porco-de-raca-capa-dura",
+    "title": "Porco de raça, capa dura",
+    "author": "P. G. Wodehouse",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/porco-de-raça.jpeg",
+    "price": 50,
+    "synopsis": "Comédia refinada de P. G. Wodehouse na mansão Blandings: porcos de exposição, tios excêntricos e planos que dão errado de forma deliciosa. Capa dura."
+  },
+  {
+    "id": "42",
+    "slug": "romeu-e-julieta",
+    "title": "Romeu e Julieta",
+    "author": "William Shakespeare",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/romeu-e-julieta.jpeg",
+    "price": 20,
+    "isBestseller": true,
+    "synopsis": "Dois jovens amantes desafiam famílias rivais em Verona — paixão instantânea e destino trágico. A tragédia universal de Shakespeare sobre amor e ódio."
+  }
+]

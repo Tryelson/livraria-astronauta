@@ -1,0 +1,330 @@
+/* ——— Banners (hero + faixa de benefícios) ——— */
+@keyframes hero-banner-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero-carousel-section {
+  border-bottom: 1px solid
+    color-mix(in oklch, var(--brand-teal) 18%, transparent);
+}
+
+.hero-carousel {
+  position: relative;
+}
+
+/* Viewport arredondado — evita “caixa quadrada” ao cortar sombra do slide */
+.hero-carousel [data-slot="carousel-content"] {
+  border-radius: calc(var(--radius) * 2);
+  overflow: hidden;
+}
+
+.hero-carousel [data-slot="carousel-content"] > div {
+  padding-block: 0.25rem;
+}
+
+.hero-carousel [data-slot="carousel-item"] {
+  overflow: visible;
+}
+
+.hero-banner {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  overflow: hidden;
+  min-height: 22rem;
+  border-radius: calc(var(--radius) * 2);
+  border: 1px solid color-mix(in oklch, var(--brand-teal) 28%, transparent);
+  text-decoration: none;
+  color: var(--brand-cream);
+  outline: none;
+  background: linear-gradient(
+    135deg,
+    oklch(0.12 0.038 268) 0%,
+    oklch(0.15 0.042 255) 45%,
+    oklch(0.11 0.036 265) 100%
+  );
+  /* Sombras só internas — externas eram clipadas em retângulo pelo carrossel */
+  box-shadow: inset 0 1px 0 color-mix(in oklch, white 6%, transparent);
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.hero-banner:hover {
+  border-color: color-mix(in oklch, var(--brand-orange) 50%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 10%, transparent),
+    inset 0 0 48px color-mix(in oklch, var(--banner-accent) 18%, transparent);
+}
+
+.hero-banner:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, white 10%, transparent),
+    inset 0 0 40px color-mix(in oklch, var(--banner-accent) 15%, transparent),
+    0 0 0 2px color-mix(in oklch, var(--brand-orange) 55%, transparent);
+}
+
+.hero-banner--teal {
+  --banner-accent: var(--brand-teal);
+  --banner-glow: color-mix(in oklch, var(--brand-teal) 35%, transparent);
+}
+
+.hero-banner--orange {
+  --banner-accent: var(--brand-orange);
+  --banner-glow: color-mix(in oklch, var(--brand-orange) 35%, transparent);
+}
+
+.hero-banner--cream {
+  --banner-accent: var(--brand-cream);
+  --banner-glow: color-mix(in oklch, var(--brand-cream) 25%, transparent);
+}
+
+.hero-banner__nebula,
+.hero-banner__stars {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.hero-banner__nebula {
+  opacity: 0.85;
+  background:
+    radial-gradient(
+      ellipse 55% 70% at 85% 20%,
+      var(--banner-glow),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 60% at 10% 90%,
+      color-mix(in oklch, var(--brand-teal) 18%, transparent),
+      transparent 50%
+    );
+}
+
+.hero-banner__stars {
+  opacity: 0.5;
+  background:
+    radial-gradient(circle at 20% 30%, white 0.5px, transparent 0.6px),
+    radial-gradient(circle at 75% 25%, white 0.45px, transparent 0.55px),
+    radial-gradient(circle at 60% 75%, white 0.4px, transparent 0.5px),
+    radial-gradient(circle at 40% 55%, white 0.35px, transparent 0.45px);
+}
+
+.hero-banner__orbit {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  border: 1px dashed color-mix(in oklch, var(--banner-accent) 35%, transparent);
+  opacity: 0.45;
+}
+
+.hero-banner__orbit--a {
+  width: 9rem;
+  height: 9rem;
+  right: 1.25rem;
+  top: 12%;
+}
+
+.hero-banner__orbit--b {
+  width: 6rem;
+  height: 6rem;
+  left: 1rem;
+  bottom: 12%;
+  opacity: 0.3;
+}
+
+.hero-banner:hover .hero-banner__orbit--a {
+  animation: hero-banner-orbit-spin 18s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .hero-banner {
+    min-height: 18.5rem;
+  }
+}
+
+.hero-banner__tag {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: oklch(0.14 0.03 262);
+  background: linear-gradient(
+    135deg,
+    var(--brand-cream),
+    color-mix(in oklch, var(--banner-accent) 80%, white)
+  );
+  box-shadow: 0 0 16px var(--banner-glow);
+}
+
+.hero-banner__eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--brand-cream) 75%, transparent);
+}
+
+.hero-banner__title {
+  margin-top: 0.5rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--brand-cream);
+}
+
+.hero-banner__subtitle {
+  margin-top: 0.5rem;
+  max-width: 28rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: color-mix(in oklch, var(--brand-teal) 65%, var(--muted-foreground));
+}
+
+@media (min-width: 768px) {
+  .hero-banner__subtitle {
+    font-size: 1rem;
+  }
+}
+
+.hero-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1rem 0.5rem 1.125rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--primary-foreground);
+  background: var(--banner-accent);
+  box-shadow: 0 0 24px var(--banner-glow);
+  transition:
+    gap 0.25s ease,
+    filter 0.25s ease,
+    transform 0.2s ease;
+}
+
+.hero-banner:hover .hero-banner__cta {
+  gap: 0.6rem;
+  filter: brightness(1.08);
+}
+
+.hero-banner--cream .hero-banner__cta {
+  color: oklch(0.14 0.03 262);
+}
+
+.hero-banner__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 11rem;
+}
+
+.hero-banner__cover-glow {
+  pointer-events: none;
+  position: absolute;
+  width: min(80%, 14rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--banner-glow), transparent 68%);
+  filter: blur(12px);
+}
+
+.hero-banner__cover {
+  position: relative;
+  z-index: 1;
+  width: min(58%, 11rem);
+  aspect-ratio: 2 / 3;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-banner:hover .hero-banner__cover {
+  transform: scale(1.04);
+}
+
+@media (min-width: 768px) {
+  .hero-banner__cover {
+    width: min(75%, 12.5rem);
+  }
+}
+
+.hero-carousel__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklch, var(--brand-teal) 40%, transparent);
+  background: color-mix(in oklch, var(--card) 85%, transparent);
+  color: var(--brand-cream);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero-carousel__nav:hover {
+  border-color: color-mix(in oklch, var(--brand-orange) 55%, transparent);
+  background: color-mix(in oklch, var(--brand-orange) 18%, transparent);
+  box-shadow: 0 0 20px color-mix(in oklch, var(--brand-orange) 25%, transparent);
+}
+
+.hero-carousel__nav--prev {
+  left: 0.65rem;
+}
+
+.hero-carousel__nav--next {
+  right: 0.65rem;
+}
+
+.hero-carousel__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  z-index: 10;
+  display: flex;
+  transform: translateX(-50%);
+  gap: 0.375rem;
+}
+
+.hero-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 9999px;
+  background: color-mix(in oklch, white 25%, transparent);
+  cursor: pointer;
+  transition:
+    width 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-carousel__dot--active {
+  width: 1.375rem;
+  background: var(--brand-orange);
+  box-shadow: 0 0 12px color-mix(in oklch, var(--brand-orange) 55%, transparent);
+}
+
