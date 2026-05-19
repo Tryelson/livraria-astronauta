@@ -4,6 +4,12 @@ export const WHATSAPP_NUMBER =
 
 export const STORE_NAME = "Livraria Astronauta";
 
+/** Quantidade mínima de livros no carrinho para o desconto */
+export const CART_PROMO_MIN_BOOKS = 3;
+
+/** Percentual de desconto quando a promoção se aplica */
+export const CART_PROMO_DISCOUNT_PERCENT = 10;
+
 export const STORE_LOGO_PATH = "/livraria-images/livraria-logo.jpeg";
 
 export const AUTHOR_INSTAGRAM_URL =

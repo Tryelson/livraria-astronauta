@@ -23,8 +23,40 @@
     transform: none;
   }
 
-  .cart-drawer__checkout:hover {
+  .cart-drawer__checkout:hover,
+  .category-orbit-card:hover,
+  .category-nav-drawer__cta:hover {
     transform: none;
+  }
+
+  .category-nav-drawer__title-icon,
+  .category-nav-drawer .category-orbit-card {
+    animation: none !important;
+  }
+
+  .book-filters__badge-dot {
+    animation: none !important;
+  }
+
+  .book-filters__reset:hover {
+    transform: none;
+  }
+
+  .book-filters--clearing .book-filters__badge,
+  .book-filters--clearing .book-filters__chip,
+  .catalog-recalibrate__grid--sweep .catalog-recalibrate__card-wrap,
+  .catalog-recalibrate__grid--reveal .catalog-recalibrate__card-wrap,
+  .catalog-recalibrate__grid--reveal .book-card__frame,
+  .catalog-recalibrate__scan-beam,
+  .catalog-recalibrate__scan-trail,
+  .catalog-recalibrate__scan-label,
+  .catalog-recalibrate__empty--reveal {
+    animation: none !important;
+  }
+
+  .catalog-recalibrate__scan-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
   .hero-banner:hover .hero-banner__cover,
@@ -50,5 +82,28 @@
   .animate-floating-cart-pulse {
     animation: none !important;
     transition: opacity 0.2s ease;
+  }
+
+  .site-intro,
+  .site-intro__veil,
+  .site-intro__stars,
+  .site-intro__scan,
+  .site-intro__content,
+  .site-intro__orbit,
+  .site-intro__logo,
+  .site-intro__wordmark {
+    animation: none !important;
+  }
+
+  html[data-intro="active"] .site-shell {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  html[data-intro="active"] .site-shell > *,
+  html[data-intro="exiting"] .site-shell > * {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
   }
 }

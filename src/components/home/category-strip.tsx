@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { Compass } from "lucide-react";
+import { CategoryOrbitCard } from "@/components/catalog/category-orbit-card";
 import { categories } from "@/lib/books";
+import { categoryBookCounts } from "@/lib/category-stats";
+import { Compass } from "lucide-react";
 
 export function CategoryStrip() {
   return (
@@ -12,18 +13,16 @@ export function CategoryStrip() {
             Principais categorias
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+        <ul className="category-strip__grid" aria-label="Principais categorias">
           {categories.map((cat) => (
-            <Link
-              key={cat.slug}
-              href={`/categoria/${cat.slug}`}
-              className="category-pill"
-            >
-              <span className="category-pill__glow" aria-hidden />
-              {cat.name}
-            </Link>
+            <li key={cat.slug}>
+              <CategoryOrbitCard
+                category={cat}
+                bookCount={categoryBookCounts[cat.slug] ?? 0}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -1,0 +1,204 @@
+/* ——— Card de categoria (órbita) — drawer + home ——— */
+.category-orbit-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem 0.75rem 0.875rem 0.875rem;
+  border-radius: 0.875rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid color-mix(in oklch, var(--brand-teal) 22%, transparent);
+  background: color-mix(in oklch, var(--card) 55%, transparent);
+  overflow: hidden;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.category-orbit-card:hover {
+  border-color: color-mix(
+    in oklch,
+    var(--orbit-accent, var(--brand-teal)) 55%,
+    transparent
+  );
+  background: color-mix(
+    in oklch,
+    var(--orbit-accent, var(--brand-teal)) 12%,
+    transparent
+  );
+  box-shadow:
+    0 0 32px
+      color-mix(
+        in oklch,
+        var(--orbit-accent, var(--brand-teal)) 18%,
+        transparent
+      ),
+    inset 0 1px 0 color-mix(in oklch, white 6%, transparent);
+}
+
+.category-orbit-card--ofertas {
+  --orbit-accent: var(--brand-orange);
+}
+
+.category-orbit-card--literatura {
+  --orbit-accent: var(--brand-teal);
+}
+
+.category-orbit-card--conservadorismo {
+  --orbit-accent: oklch(0.72 0.12 55);
+}
+
+.category-orbit-card--historia {
+  --orbit-accent: oklch(0.78 0.08 85);
+}
+
+.category-orbit-card--filosofia {
+  --orbit-accent: oklch(0.75 0.1 300);
+}
+
+.category-orbit-card__ring {
+  position: absolute;
+  top: 50%;
+  left: 1.35rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-top: -1.375rem;
+  border-radius: 9999px;
+  border: 1px dashed
+    color-mix(in oklch, var(--orbit-accent, var(--brand-teal)) 35%, transparent);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease;
+}
+
+.category-orbit-card:hover .category-orbit-card__ring {
+  opacity: 1;
+  transform: scale(1.35);
+}
+
+.category-orbit-card__planet {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  color: var(--orbit-accent, var(--brand-teal));
+  background: color-mix(
+    in oklch,
+    var(--orbit-accent, var(--brand-teal)) 16%,
+    transparent
+  );
+  border: 1px solid
+    color-mix(in oklch, var(--orbit-accent, var(--brand-teal)) 45%, transparent);
+  box-shadow: 0 0 20px
+    color-mix(in oklch, var(--orbit-accent, var(--brand-teal)) 22%, transparent);
+}
+
+.category-orbit-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.category-orbit-card__name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--brand-cream);
+}
+
+.category-orbit-card__desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  color: var(--muted-foreground);
+}
+
+.category-orbit-card__count {
+  margin-top: 0.2rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(
+    in oklch,
+    var(--orbit-accent, var(--brand-teal)) 75%,
+    var(--muted-foreground)
+  );
+}
+
+.category-orbit-card__arrow {
+  align-self: center;
+  color: color-mix(
+    in oklch,
+    var(--orbit-accent, var(--brand-teal)) 70%,
+    transparent
+  );
+  opacity: 0.6;
+  transition:
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+
+.category-orbit-card:hover .category-orbit-card__arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* Drawer: deslize horizontal + entrada em sequência */
+.category-nav-drawer .category-orbit-card:hover {
+  transform: translateX(4px);
+}
+
+.category-nav-drawer__orbits > li:nth-child(1) .category-orbit-card {
+  animation: category-orbit-enter 0.5s ease backwards;
+  animation-delay: 0.04s;
+}
+.category-nav-drawer__orbits > li:nth-child(2) .category-orbit-card {
+  animation: category-orbit-enter 0.5s ease backwards;
+  animation-delay: 0.08s;
+}
+.category-nav-drawer__orbits > li:nth-child(3) .category-orbit-card {
+  animation: category-orbit-enter 0.5s ease backwards;
+  animation-delay: 0.12s;
+}
+.category-nav-drawer__orbits > li:nth-child(4) .category-orbit-card {
+  animation: category-orbit-enter 0.5s ease backwards;
+  animation-delay: 0.16s;
+}
+.category-nav-drawer__orbits > li:nth-child(5) .category-orbit-card {
+  animation: category-orbit-enter 0.5s ease backwards;
+  animation-delay: 0.2s;
+}
+
+/* Home: leve elevação no hover */
+.category-strip__grid .category-orbit-card:hover {
+  transform: translateY(-3px);
+}
+
+.category-strip__grid .category-orbit-card:hover .category-orbit-card__arrow {
+  transform: translateX(3px);
+}
+
+@keyframes category-orbit-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

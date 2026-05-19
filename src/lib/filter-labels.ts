@@ -2,6 +2,8 @@ import { categories } from "@/lib/books";
 import type { SortOption } from "@/types/book";
 
 export const DEFAULT_SORT: SortOption = "title-asc";
+
+/** Mantido para URLs/páginas que usam slug único inicial */
 export const DEFAULT_CATEGORY_SLUG = "all";
 
 export const SORT_OPTIONS: { value: SortOption; label: string }[] = [
@@ -27,19 +29,32 @@ export function getCategoryLabel(categorySlug: string): string {
   return category?.name ?? categorySlug;
 }
 
+export function getCategorySelectionLabel(categorySlugs: string[]): string {
+  if (categorySlugs.length === 0) {
+    return "Todas as categorias";
+  }
+  if (categorySlugs.length === 1) {
+    return getCategoryLabel(categorySlugs[0]);
+  }
+  return `${categorySlugs.length} setores selecionados`;
+}
+
+export function initialCategorySlugsFromSlug(slug: string): string[] {
+  if (slug === DEFAULT_CATEGORY_SLUG) return [];
+  return [slug];
+}
+
 export function hasActiveFilters(
-  categorySlug: string,
+  categorySlugs: string[],
   sort: SortOption,
   options?: {
-    defaultCategorySlug?: string;
     defaultSort?: SortOption;
     showCategoryFilter?: boolean;
   },
 ): boolean {
-  const defaultCategory = options?.defaultCategorySlug ?? DEFAULT_CATEGORY_SLUG;
   const defaultSort = options?.defaultSort ?? DEFAULT_SORT;
   const categoryActive =
-    options?.showCategoryFilter !== false && categorySlug !== defaultCategory;
+    options?.showCategoryFilter !== false && categorySlugs.length > 0;
   const sortActive = sort !== defaultSort;
   return categoryActive || sortActive;
 }

@@ -7,6 +7,7 @@ import {
 } from "@/lib/config";
 
 const siteMapLinks = [
+  { href: "/catalogo", label: "Catálogo completo" },
   { href: "/#destaques", label: "Destaques" },
   { href: "/#mais-vendidos", label: "Mais vendidos" },
   { href: "/categoria/literatura", label: "Literatura" },

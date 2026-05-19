@@ -1,0 +1,211 @@
+/* ——— Recalibração do catálogo: varredura + onda de pouso ——— */
+.catalog-recalibrate {
+  position: relative;
+  isolation: isolate;
+  min-height: 8rem;
+}
+
+.catalog-recalibrate--active {
+  pointer-events: none;
+}
+
+.catalog-recalibrate--active .book-filters {
+  pointer-events: auto;
+}
+
+/* Varredura luminosa durante a transição */
+.catalog-recalibrate__scan {
+  pointer-events: none;
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  overflow: hidden;
+  border-radius: calc(var(--radius) * 1.1);
+}
+
+.catalog-recalibrate__scan-beam {
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  height: 42%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    color-mix(in oklch, var(--brand-teal) 22%, transparent) 35%,
+    color-mix(in oklch, var(--brand-orange) 28%, transparent) 50%,
+    color-mix(in oklch, var(--brand-teal) 18%, transparent) 65%,
+    transparent 100%
+  );
+  filter: blur(6px);
+  animation: catalog-recalibrate-scan-beam 0.68s cubic-bezier(0.45, 0, 0.2, 1)
+    forwards;
+}
+
+.catalog-recalibrate__scan-trail {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--brand-teal) 6%, transparent) 0%,
+    color-mix(in oklch, var(--brand-orange) 4%, transparent) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  animation: catalog-recalibrate-scan-trail 0.68s ease forwards;
+}
+
+.catalog-recalibrate__scan-label {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  margin: 0;
+  padding: 0.35rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: color-mix(in oklch, var(--brand-cream) 95%, white);
+  border: 1px solid color-mix(in oklch, var(--brand-teal) 35%, transparent);
+  background: color-mix(in oklch, var(--background) 75%, transparent);
+  backdrop-filter: blur(8px);
+  transform: translateX(-50%) translateY(8px);
+  opacity: 0;
+  animation: catalog-recalibrate-scan-label 0.5s ease 0.12s forwards;
+}
+
+.catalog-recalibrate--sweep .catalog-recalibrate__grid {
+  transition: opacity 0.35s ease;
+}
+
+/* ——— Filtros: chips dissolvem ——— */
+.book-filters--clearing .book-filters__badge {
+  animation: catalog-recalibrate-filter-out 0.32s ease forwards;
+}
+
+.book-filters--clearing .book-filters__chip {
+  animation: catalog-recalibrate-filter-out 0.34s ease forwards;
+  animation-delay: calc(var(--chip-i, 0) * 0.04s);
+}
+
+.book-filters--clearing .book-filters__chips .book-filters__chip:nth-child(1) {
+  --chip-i: 0;
+}
+.book-filters--clearing .book-filters__chips .book-filters__chip:nth-child(2) {
+  --chip-i: 1;
+}
+.book-filters--clearing .book-filters__chips .book-filters__chip:nth-child(3) {
+  --chip-i: 2;
+}
+.book-filters--clearing .book-filters__chips .book-filters__chip:nth-child(4) {
+  --chip-i: 3;
+}
+.book-filters--clearing .book-filters__chips .book-filters__chip:nth-child(5) {
+  --chip-i: 4;
+}
+
+/* ——— Grid: saída na varredura ——— */
+.catalog-recalibrate__grid--sweep .catalog-recalibrate__card-wrap {
+  animation: catalog-recalibrate-card-sweep-out 0.55s
+    cubic-bezier(0.55, 0, 1, 0.45) forwards;
+  animation-delay: calc(min(var(--recalibrate-i, 0), 20) * 0.018s);
+}
+
+/* ——— Grid: entrada em onda diagonal ——— */
+.catalog-recalibrate__grid--reveal .catalog-recalibrate__card-wrap {
+  animation: catalog-recalibrate-card-dock 0.72s cubic-bezier(0.22, 1, 0.36, 1)
+    backwards;
+  animation-delay: calc(min(var(--recalibrate-i, 0), 24) * 0.032s);
+}
+
+.catalog-recalibrate__grid--reveal .book-card__frame {
+  animation: catalog-recalibrate-frame-pulse 0.85s ease backwards;
+  animation-delay: calc(min(var(--recalibrate-i, 0), 24) * 0.032s + 0.15s);
+}
+
+.catalog-recalibrate__empty--reveal {
+  animation: catalog-recalibrate-empty-reveal 0.55s
+    cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+@keyframes catalog-recalibrate-scan-beam {
+  0% {
+    top: -45%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+@keyframes catalog-recalibrate-scan-trail {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes catalog-recalibrate-scan-label {
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes catalog-recalibrate-filter-out {
+  to {
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+  }
+}
+
+@keyframes catalog-recalibrate-card-sweep-out {
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.97);
+  }
+}
+
+@keyframes catalog-recalibrate-card-dock {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes catalog-recalibrate-frame-pulse {
+  0% {
+    border-color: color-mix(in oklch, var(--brand-orange) 70%, transparent);
+    box-shadow: 0 0 20px
+      color-mix(in oklch, var(--brand-orange) 35%, transparent);
+  }
+  100% {
+    border-color: color-mix(in oklch, var(--brand-teal) 22%, transparent);
+    box-shadow: none;
+  }
+}
+
+@keyframes catalog-recalibrate-empty-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

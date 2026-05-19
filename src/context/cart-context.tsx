@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { getCartTotals, type CartPromotion } from "@/lib/cart-promo";
 import { toastBookAdded } from "@/lib/toast";
 import type { Book, CartItem } from "@/types/book";
 
@@ -16,7 +17,10 @@ const STORAGE_KEY = "livraria-astronauta-cart";
 type CartContextValue = {
   items: CartItem[];
   itemCount: number;
+  subtotal: number;
+  discountAmount: number;
   total: number;
+  promo: CartPromotion;
   isDrawerOpen: boolean;
   openDrawer: () => void;
   closeDrawer: () => void;
@@ -89,21 +93,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const clearCart = useCallback(() => setItems([]), []);
 
-  const itemCount = useMemo(
-    () => items.reduce((sum, i) => sum + i.quantity, 0),
-    [items],
-  );
-
-  const total = useMemo(
-    () => items.reduce((sum, i) => sum + i.book.price * i.quantity, 0),
-    [items],
-  );
+  const cartTotals = useMemo(() => getCartTotals(items), [items]);
 
   const value = useMemo<CartContextValue>(
     () => ({
       items,
-      itemCount,
-      total,
+      itemCount: cartTotals.itemCount,
+      subtotal: cartTotals.subtotal,
+      discountAmount: cartTotals.discountAmount,
+      total: cartTotals.total,
+      promo: cartTotals.promo,
       isDrawerOpen,
       openDrawer: () => setDrawerOpen(true),
       closeDrawer: () => setDrawerOpen(false),
@@ -115,8 +114,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }),
     [
       items,
-      itemCount,
-      total,
+      cartTotals,
       isDrawerOpen,
       addItem,
       removeItem,

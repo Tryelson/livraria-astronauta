@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Drawer } from "@/components/ui/drawer";
+import { CartPromoBanner } from "@/components/cart/cart-promo-banner";
 import { useCart } from "@/context/cart-context";
 import { formatPrice } from "@/lib/format";
 import { buildWhatsAppOrderUrl } from "@/lib/whatsapp";
@@ -22,7 +23,10 @@ export function CartDrawer() {
   const {
     items,
     itemCount,
+    subtotal,
+    discountAmount,
     total,
+    promo,
     isDrawerOpen,
     setDrawerOpen,
     updateQuantity,
@@ -72,17 +76,28 @@ export function CartDrawer() {
             <p className="cart-drawer__empty-desc">
               Explore o catálogo e adicione títulos ao seu carrinho espacial.
             </p>
+            <p className="cart-drawer__empty-promo">
+              Leve 3 livros e ganhe 10% de desconto na missão!
+            </p>
             <Button
               type="button"
               variant="ghost"
               className="cart-drawer__empty-cta"
-              onClick={() => setDrawerOpen(false)}
+              nativeButton={false}
+              render={
+                <Link href="/catalogo" onClick={() => setDrawerOpen(false)} />
+              }
             >
               Explorar catálogo
             </Button>
           </div>
         ) : (
           <>
+            <CartPromoBanner
+              itemCount={itemCount}
+              promo={promo}
+              className="cart-drawer__promo"
+            />
             <ul className="cart-drawer__list">
               {items.map((item) => (
                 <li key={item.book.id} className="cart-drawer__item">
@@ -167,13 +182,31 @@ export function CartDrawer() {
             </ul>
 
             <Drawer.Footer>
-              <div className="cart-drawer__total">
-                <span className="cart-drawer__total-label">
-                  Total da missão
-                </span>
-                <span className="cart-drawer__total-value">
-                  {formatPrice(total)}
-                </span>
+              <div className="cart-drawer__summary">
+                <div className="cart-drawer__summary-row">
+                  <span className="cart-drawer__summary-label">Subtotal</span>
+                  <span className="cart-drawer__summary-value">
+                    {formatPrice(subtotal)}
+                  </span>
+                </div>
+                {discountAmount > 0 && (
+                  <div className="cart-drawer__summary-row cart-drawer__summary-row--discount">
+                    <span className="cart-drawer__summary-label">
+                      Desconto ({promo.discountPercent}%)
+                    </span>
+                    <span className="cart-drawer__summary-value cart-drawer__summary-value--discount">
+                      −{formatPrice(discountAmount)}
+                    </span>
+                  </div>
+                )}
+                <div className="cart-drawer__total">
+                  <span className="cart-drawer__total-label">
+                    Total da missão
+                  </span>
+                  <span className="cart-drawer__total-value">
+                    {formatPrice(total)}
+                  </span>
+                </div>
               </div>
               <a
                 href={whatsappUrl}

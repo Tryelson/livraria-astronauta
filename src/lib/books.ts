@@ -22,6 +22,23 @@ export function getBooksByCategory(categorySlug: string): Book[] {
   return books.filter((b) => b.categorySlug === categorySlug);
 }
 
+/** União das categorias selecionadas dentro da lista informada; vazio = sem filtro. */
+export function filterBooksByCategorySlugs(
+  list: Book[],
+  categorySlugs: string[],
+): Book[] {
+  if (categorySlugs.length === 0) return list;
+
+  const allowedIds = new Set<string>();
+  for (const slug of categorySlugs) {
+    for (const book of getBooksByCategory(slug)) {
+      allowedIds.add(book.id);
+    }
+  }
+
+  return list.filter((book) => allowedIds.has(book.id));
+}
+
 export function getFeaturedBooks(): Book[] {
   return books.filter((b) => b.isFeatured);
 }

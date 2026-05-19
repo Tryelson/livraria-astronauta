@@ -20,7 +20,12 @@
 @import "../styles/components/book-card.css";
 @import "../styles/components/hero-carousel.css";
 @import "../styles/components/mission-strip.css";
-@import "../styles/components/category-pill.css";
+@import "../styles/components/category-orbit-card.css";
+@import "../styles/components/category-strip.css";
+@import "../styles/components/book-filters.css";
+@import "../styles/components/catalog-recalibrate.css";
+@import "../styles/components/site-intro.css";
 @import "../styles/components/cart-drawer.css";
+@import "../styles/components/category-nav-drawer.css";
 @import "../styles/components/toast.css";
 @import "../styles/base/reduced-motion.css";

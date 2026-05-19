@@ -1,123 +1,233 @@
 "use client";
 
-import { RotateCcw } from "lucide-react";
+import { CategoryMultiSelect } from "@/components/catalog/category-multi-select";
+import {
+  ArrowDownAZ,
+  ArrowDownUp,
+  Orbit,
+  Radar,
+  RotateCcw,
+  Sparkles,
+  X,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
 } from "@/components/ui/select";
-import { categories } from "@/lib/books";
 import {
-  DEFAULT_CATEGORY_SLUG,
   DEFAULT_SORT,
   SORT_OPTIONS,
   getCategoryLabel,
   getSortLabel,
   hasActiveFilters,
 } from "@/lib/filter-labels";
+import type { RecalibratePhase } from "@/hooks/use-catalog-recalibrate";
+import { cn } from "@/lib/utils";
+import type { LucideIcon } from "lucide-react";
 import type { SortOption } from "@/types/book";
+
+const SORT_ICONS: Record<SortOption, LucideIcon> = {
+  "title-asc": ArrowDownAZ,
+  "price-asc": ArrowDownUp,
+  "price-desc": ArrowDownUp,
+  "discount-desc": Sparkles,
+};
 
 type BookFiltersProps = {
   sort: SortOption;
-  categorySlug: string;
+  categorySlugs: string[];
   onSortChange: (sort: SortOption) => void;
-  onCategoryChange: (slug: string) => void;
+  onCategorySlugsChange: (slugs: string[]) => void;
   showCategoryFilter?: boolean;
-  defaultCategorySlug?: string;
   defaultSort?: SortOption;
+  recalibratePhase?: RecalibratePhase;
+  onRecalibrate?: () => void | Promise<void>;
 };
 
 export function BookFilters({
   sort,
-  categorySlug,
+  categorySlugs,
   onSortChange,
-  onCategoryChange,
+  onCategorySlugsChange,
   showCategoryFilter = true,
-  defaultCategorySlug = DEFAULT_CATEGORY_SLUG,
   defaultSort = DEFAULT_SORT,
+  recalibratePhase = "idle",
+  onRecalibrate,
 }: BookFiltersProps) {
-  const filtersActive = hasActiveFilters(categorySlug, sort, {
-    defaultCategorySlug,
+  const filtersActive = hasActiveFilters(categorySlugs, sort, {
     defaultSort,
     showCategoryFilter,
   });
 
-  function handleReset() {
+  const categoryActive = showCategoryFilter && categorySlugs.length > 0;
+  const sortActive = sort !== defaultSort;
+  const SortIcon = SORT_ICONS[sort] ?? ArrowDownUp;
+
+  function applyReset() {
     if (showCategoryFilter) {
-      onCategoryChange(defaultCategorySlug);
+      onCategorySlugsChange([]);
     }
     onSortChange(defaultSort);
   }
 
+  async function handleReset() {
+    if (onRecalibrate) {
+      await onRecalibrate();
+      return;
+    }
+    applyReset();
+  }
+
+  function removeCategory(slug: string) {
+    onCategorySlugsChange(categorySlugs.filter((s) => s !== slug));
+  }
+
   return (
-    <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end">
-      {showCategoryFilter && (
-        <div className="flex flex-col gap-1.5">
-          <Label htmlFor="filter-category" className="text-sm font-medium">
-            Categoria
-          </Label>
+    <section
+      className={cn(
+        "book-filters",
+        recalibratePhase === "clearing" && "book-filters--clearing",
+      )}
+      aria-label="Filtros do catálogo"
+    >
+      <span className="book-filters__glow" aria-hidden />
+
+      <header className="book-filters__header">
+        <span className="book-filters__header-icon" aria-hidden>
+          <Radar className="size-4" />
+        </span>
+        <div className="book-filters__header-text">
+          <p className="book-filters__header-title">Painel de navegação</p>
+          <p className="book-filters__header-sub">
+            Ajuste os setores e a trajetória da sua exploração
+          </p>
+        </div>
+        {filtersActive && (
+          <span className="book-filters__badge">
+            <span className="book-filters__badge-dot" aria-hidden />
+            Filtros ativos
+          </span>
+        )}
+      </header>
+
+      <div
+        className={cn(
+          "book-filters__controls",
+          filtersActive && "book-filters__controls--with-reset",
+        )}
+      >
+        {showCategoryFilter && (
+          <fieldset className="book-filters__field book-filters__field--categories">
+            <legend className="book-filters__label pb-2">
+              <Orbit
+                className="book-filters__label-icon size-3.5"
+                aria-hidden
+              />
+              Setores
+            </legend>
+            <CategoryMultiSelect
+              value={categorySlugs}
+              onChange={onCategorySlugsChange}
+              recalibratePhase={recalibratePhase}
+            />
+          </fieldset>
+        )}
+
+        <fieldset className="book-filters__field">
+          <legend className="book-filters__label pb-2">
+            <Sparkles
+              className="book-filters__label-icon size-3.5"
+              aria-hidden
+            />
+            Trajetória
+          </legend>
           <Select
-            value={categorySlug}
-            onValueChange={(v) => v && onCategoryChange(v)}
+            value={sort}
+            onValueChange={(v) => v && onSortChange(v as SortOption)}
           >
             <SelectTrigger
-              id="filter-category"
-              className="w-full min-w-0 bg-card/90 backdrop-blur-sm sm:min-w-[200px] sm:w-[240px]"
+              id="filter-sort"
+              className="book-filters__trigger book-filters__trigger--sort"
             >
-              <span className="truncate">{getCategoryLabel(categorySlug)}</span>
+              <span className="book-filters__trigger-icon" aria-hidden>
+                <SortIcon className="size-3.5" />
+              </span>
+              <span className="book-filters__trigger-value truncate">
+                {getSortLabel(sort)}
+              </span>
             </SelectTrigger>
-            <SelectContent>
-              <SelectItem value={DEFAULT_CATEGORY_SLUG}>
-                Todas as categorias
-              </SelectItem>
-              {categories.map((cat) => (
-                <SelectItem key={cat.slug} value={cat.slug}>
-                  {cat.name}
-                </SelectItem>
-              ))}
+            <SelectContent className="book-filters__content">
+              {SORT_OPTIONS.map((option) => {
+                const OptionIcon = SORT_ICONS[option.value];
+                return (
+                  <SelectItem
+                    key={option.value}
+                    value={option.value}
+                    className="book-filters__item"
+                  >
+                    <span className="flex items-center gap-2">
+                      <OptionIcon className="size-3.5 shrink-0 opacity-80" />
+                      {option.label}
+                    </span>
+                  </SelectItem>
+                );
+              })}
             </SelectContent>
           </Select>
-        </div>
-      )}
+        </fieldset>
 
-      <div className="flex flex-col gap-1.5">
-        <Label htmlFor="filter-sort" className="text-sm font-medium">
-          Ordenar por
-        </Label>
-        <Select
-          value={sort}
-          onValueChange={(v) => v && onSortChange(v as SortOption)}
-        >
-          <SelectTrigger
-            id="filter-sort"
-            className="w-full min-w-0 bg-card/90 backdrop-blur-sm sm:min-w-[200px] sm:w-[240px]"
+        {filtersActive && (
+          <Button
+            type="button"
+            variant="ghost"
+            className="book-filters__reset"
+            onClick={() => void handleReset()}
+            disabled={recalibratePhase !== "idle"}
           >
-            <span className="truncate">{getSortLabel(sort)}</span>
-          </SelectTrigger>
-          <SelectContent>
-            {SORT_OPTIONS.map((option) => (
-              <SelectItem key={option.value} value={option.value}>
-                {option.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+            <RotateCcw className="size-4" aria-hidden />
+            Recalibrar
+          </Button>
+        )}
       </div>
 
       {filtersActive && (
-        <Button
-          type="button"
-          variant="outline"
-          className="w-full gap-2 bg-card/90 backdrop-blur-sm sm:w-auto"
-          onClick={handleReset}
-        >
-          <RotateCcw className="size-4" />
-          Limpar filtros
-        </Button>
+        <div className="book-filters__chips" aria-label="Filtros aplicados">
+          {categorySlugs.map((slug) => (
+            <button
+              key={slug}
+              type="button"
+              className="book-filters__chip"
+              onClick={() => removeCategory(slug)}
+            >
+              <span className="book-filters__chip-label">
+                {getCategoryLabel(slug)}
+              </span>
+              <span className="book-filters__chip-remove" aria-hidden>
+                <X className="size-3" />
+              </span>
+              <span className="sr-only">Remover categoria</span>
+            </button>
+          ))}
+          {sortActive && (
+            <button
+              type="button"
+              className="book-filters__chip"
+              onClick={() => onSortChange(defaultSort)}
+            >
+              <span className="book-filters__chip-label">
+                {getSortLabel(sort)}
+              </span>
+              <span className="book-filters__chip-remove" aria-hidden>
+                <X className="size-3" />
+              </span>
+              <span className="sr-only">Remover ordenação</span>
+            </button>
+          )}
+        </div>
       )}
-    </div>
+    </section>
   );
 }

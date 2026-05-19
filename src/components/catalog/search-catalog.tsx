@@ -1,14 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { BookFilters } from "@/components/catalog/book-filters";
+import { CatalogResults } from "@/components/catalog/catalog-results";
 import { BackButton } from "@/components/layout/back-button";
-import { BookGrid } from "@/components/catalog/book-grid";
-import { searchBooks, sortBooks } from "@/lib/books";
 import {
-  DEFAULT_CATEGORY_SLUG,
-  DEFAULT_SORT,
-} from "@/lib/filter-labels";
+  filterBooksByCategorySlugs,
+  searchBooks,
+  sortBooks,
+} from "@/lib/books";
+import { DEFAULT_SORT } from "@/lib/filter-labels";
 import type { SortOption } from "@/types/book";
 
 type SearchCatalogProps = {
@@ -17,15 +17,13 @@ type SearchCatalogProps = {
 
 export function SearchCatalog({ query }: SearchCatalogProps) {
   const [sort, setSort] = useState<SortOption>(DEFAULT_SORT);
-  const [categorySlug, setCategorySlug] = useState(DEFAULT_CATEGORY_SLUG);
+  const [categorySlugs, setCategorySlugs] = useState<string[]>([]);
 
   const filtered = useMemo(() => {
     let list = searchBooks(query);
-    if (categorySlug !== DEFAULT_CATEGORY_SLUG) {
-      list = list.filter((b) => b.categorySlug === categorySlug);
-    }
+    list = filterBooksByCategorySlugs(list, categorySlugs);
     return sortBooks(list, sort);
-  }, [query, sort, categorySlug]);
+  }, [query, sort, categorySlugs]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
@@ -38,15 +36,13 @@ export function SearchCatalog({ query }: SearchCatalogProps) {
           {filtered.length} livro(s) encontrado(s)
         </p>
       </header>
-      <BookFilters
+      <CatalogResults
+        books={filtered}
+        categorySlugs={categorySlugs}
         sort={sort}
-        categorySlug={categorySlug}
         onSortChange={setSort}
-        onCategoryChange={setCategorySlug}
+        onCategorySlugsChange={setCategorySlugs}
       />
-      <div className="mt-6">
-        <BookGrid books={filtered} />
-      </div>
     </div>
   );
 }

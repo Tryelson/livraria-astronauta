@@ -6,8 +6,11 @@ import { BenefitsBar } from "@/components/layout/benefits-bar";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { GalaxyBackground } from "@/components/layout/galaxy-background";
+import { SiteIntroController } from "@/components/layout/site-intro-controller";
+import { SiteIntroOverlay } from "@/components/layout/site-intro-overlay";
 import { Providers } from "@/components/providers";
 import { STORE_NAME } from "@/lib/config";
+import { SITE_INTRO_BOOTSTRAP_SCRIPT } from "@/lib/site-intro";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,11 +48,17 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       className={`${inter.variable} ${libreBaskerville.variable} ${exo2.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="relative flex min-h-full flex-col font-sans">
+        <script
+          dangerouslySetInnerHTML={{ __html: SITE_INTRO_BOOTSTRAP_SCRIPT }}
+        />
         <GalaxyBackground />
+        <SiteIntroOverlay />
         <Providers>
-          <div className="relative z-0 flex min-h-full min-w-0 flex-1 flex-col overflow-x-clip">
+          <SiteIntroController />
+          <div className="site-shell relative z-0 flex min-h-full min-w-0 flex-1 flex-col overflow-x-clip">
             <SiteHeader />
             <main className="min-w-0 flex-1 overflow-x-clip">{children}</main>
             <BenefitsBar />

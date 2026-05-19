@@ -1,19 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { BookFilters } from "@/components/catalog/book-filters";
+import { CatalogResults } from "@/components/catalog/catalog-results";
 import { BackButton } from "@/components/layout/back-button";
-import { BookGrid } from "@/components/catalog/book-grid";
 import {
-  getBooksByCategory,
   books as allBooks,
+  filterBooksByCategorySlugs,
   sortBooks,
 } from "@/lib/books";
 import {
-  DEFAULT_CATEGORY_SLUG,
   DEFAULT_SORT,
+  initialCategorySlugsFromSlug,
 } from "@/lib/filter-labels";
-import type { Book, SortOption } from "@/types/book";
+import type { SortOption } from "@/types/book";
 
 type CategoryCatalogProps = {
   initialCategorySlug: string;
@@ -26,16 +25,15 @@ export function CategoryCatalog({
   title,
   description,
 }: CategoryCatalogProps) {
-  const [categorySlug, setCategorySlug] = useState(initialCategorySlug);
+  const [categorySlugs, setCategorySlugs] = useState(() =>
+    initialCategorySlugsFromSlug(initialCategorySlug),
+  );
   const [sort, setSort] = useState<SortOption>(DEFAULT_SORT);
 
   const filtered = useMemo(() => {
-    const list: Book[] =
-      categorySlug === DEFAULT_CATEGORY_SLUG
-        ? allBooks
-        : getBooksByCategory(categorySlug);
+    const list = filterBooksByCategorySlugs(allBooks, categorySlugs);
     return sortBooks(list, sort);
-  }, [categorySlug, sort]);
+  }, [categorySlugs, sort]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6">
@@ -46,17 +44,14 @@ export function CategoryCatalog({
           <p className="mt-2 text-muted-foreground">{description}</p>
         )}
       </header>
-      <BookFilters
+      <CatalogResults
+        books={filtered}
+        categorySlugs={categorySlugs}
         sort={sort}
-        categorySlug={categorySlug}
+        onCategorySlugsChange={setCategorySlugs}
         onSortChange={setSort}
-        onCategoryChange={setCategorySlug}
-        defaultCategorySlug={DEFAULT_CATEGORY_SLUG}
         defaultSort={DEFAULT_SORT}
       />
-      <div className="mt-6">
-        <BookGrid books={filtered} />
-      </div>
     </div>
   );
 }
