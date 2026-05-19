@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BookOpen, Compass, Rocket, Star } from "lucide-react";
+import { BookOpen, Rocket, Star } from "lucide-react";
 
 export type SiteLink = {
   href: string;
@@ -14,8 +14,6 @@ export const categoryNavQuickLinks: NavQuickLink[] = [
   { href: "/catalogo", label: "Catálogo", icon: BookOpen },
   { href: "/#destaques", label: "Destaques", icon: Star },
   { href: "/#mais-vendidos", label: "Mais vendidos", icon: Rocket },
-  { href: "/busca?q=autor", label: "Autores", icon: Compass },
-  { href: "/categoria/historia", label: "Editoras" },
   { href: "/categoria/literatura", label: "Novidades" },
 ];
 
