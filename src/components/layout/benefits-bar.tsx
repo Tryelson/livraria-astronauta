@@ -1,27 +1,29 @@
 import { PageContainer } from "@/components/layout/page-container";
+import { WhatsAppPhoneLink } from "@/components/layout/whatsapp-phone-link";
 import { CreditCard, Phone, Rocket, Truck } from "lucide-react";
-import { STORE_PHONE } from "@/lib/config";
 
 const benefits = [
   {
     icon: Phone,
     label: "Atendimento",
-    value: STORE_PHONE,
     accent: "orange" as const,
+    isPhone: true,
   },
   {
     icon: CreditCard,
     label: "Pagamento",
     value: "Parcele em até 6x no cartão",
     accent: "teal" as const,
+    isPhone: false,
   },
   {
     icon: Truck,
     label: "Entrega",
     value: "Entregas para Petrolândia e região",
     accent: "orange" as const,
+    isPhone: false,
   },
-];
+] as const;
 
 export function BenefitsBar() {
   return (
@@ -47,7 +49,13 @@ export function BenefitsBar() {
                 </span>
                 <div className="mission-strip__text">
                   <span className="mission-strip__label">{item.label}</span>
-                  <span className="mission-strip__value">{item.value}</span>
+                  <span className="mission-strip__value">
+                    {item.isPhone ? (
+                      <WhatsAppPhoneLink className="text-inherit hover:text-brand-cream" />
+                    ) : (
+                      item.value
+                    )}
+                  </span>
                 </div>
               </li>
             );

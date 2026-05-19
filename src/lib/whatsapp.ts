@@ -33,3 +33,10 @@ export function buildWhatsAppOrderUrl(items: CartItem[]): string {
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
+
+/** Link direto para conversa no WhatsApp da loja */
+export function getWhatsAppContactUrl(
+  message = "Olá! Gostaria de falar com a Livraria Astronauta.",
+): string {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}

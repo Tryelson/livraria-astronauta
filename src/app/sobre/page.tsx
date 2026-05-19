@@ -1,5 +1,6 @@
 import { BackButton } from "@/components/layout/back-button";
-import { STORE_ADDRESS, STORE_NAME, STORE_PHONE } from "@/lib/config";
+import { WhatsAppPhoneLink } from "@/components/layout/whatsapp-phone-link";
+import { STORE_ADDRESS, STORE_NAME } from "@/lib/config";
 
 export const metadata = {
   title: "Sobre",
@@ -43,7 +44,7 @@ export default function AboutPage() {
       <section id="contato" className="mt-10 scroll-mt-24">
         <h2 className="text-xl font-semibold">Contato</h2>
         <p className="mt-3 text-muted-foreground">
-          Telefone: {STORE_PHONE}
+          Telefone: <WhatsAppPhoneLink />
           <br />
           {STORE_ADDRESS}
         </p>

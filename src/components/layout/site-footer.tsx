@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { WhatsAppPhoneLink } from "@/components/layout/whatsapp-phone-link";
 import {
-  AUTHOR_INSTAGRAM_URL,
   STORE_ADDRESS,
+  STORE_INSTAGRAM_URL,
   STORE_NAME,
-  STORE_PHONE,
+  TM_SOFTWARE_URL,
 } from "@/lib/config";
+import { getWhatsAppContactUrl } from "@/lib/whatsapp";
 import { infoLinks, siteMapLinks } from "@/lib/site-links";
 
 export function SiteFooter() {
@@ -50,13 +52,17 @@ export function SiteFooter() {
             <h3 className="mt-6 mb-3 text-sm font-bold tracking-wider uppercase">
               Fale conosco
             </h3>
-            <p className="text-sm text-muted-foreground">{STORE_PHONE}</p>
-            <Link
-              href="/sobre#contato"
+            <p className="text-sm text-muted-foreground">
+              <WhatsAppPhoneLink />
+            </p>
+            <a
+              href={getWhatsAppContactUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-block text-sm text-brand-orange hover:underline"
             >
               Entre em contato
-            </Link>
+            </a>
           </div>
           <div>
             <h3 className="mb-3 text-sm font-bold tracking-wider uppercase">
@@ -80,19 +86,28 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border bg-background/80 py-4 text-center text-xs text-muted-foreground backdrop-blur-md">
-        <p className="font-medium">{STORE_NAME}</p>
+        <p className="font-medium">
+          <a
+            href={STORE_INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand-cream hover:underline"
+          >
+            {STORE_NAME}
+          </a>
+        </p>
         <p className="mt-1">
           © Todos os direitos reservados. {new Date().getFullYear()}
         </p>
         <p className="mt-2">
           Desenvolvido por{" "}
           <a
-            href={AUTHOR_INSTAGRAM_URL}
+            href={TM_SOFTWARE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-brand-orange hover:underline"
           >
-            TM
+            TM Software
           </a>
         </p>
       </div>
