@@ -19,8 +19,8 @@ export default function AboutPage() {
       <section id="entregas" className="mt-10 scroll-mt-24">
         <h2 className="text-xl font-semibold">Despacho e entregas</h2>
         <p className="mt-3 text-muted-foreground">
-          Enviamos para todo o Brasil. O prazo e o valor do frete são combinados
-          no WhatsApp após a confirmação do pedido.
+          Entregas para Petrolândia e região. O prazo e o valor do frete são
+          combinados no WhatsApp após a confirmação do pedido.
         </p>
       </section>
 

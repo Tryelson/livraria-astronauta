@@ -18,7 +18,7 @@ const benefits = [
   {
     icon: Truck,
     label: "Entrega",
-    value: "Enviamos para todo o Brasil",
+    value: "Entregas para Petrolândia e região",
     accent: "orange" as const,
   },
 ];
