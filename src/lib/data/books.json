@@ -436,5 +436,16 @@
     "price": 20,
     "isBestseller": true,
     "synopsis": "Dois jovens amantes desafiam famílias rivais em Verona — paixão instantânea e destino trágico. A tragédia universal de Shakespeare sobre amor e ódio."
+  },
+   {
+    "id": "43",
+    "slug": "memorias-do-subsolo",
+    "title": "Memórias do subsolo",
+    "author": "Fyodor Dostoevsky",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/memorias-do-subsolo.jpeg",
+    "price": 20,
+    "isBestseller": true,
+    "synopsis": "Escrito na cabeceira de morte de sua primeira mulher, numa situação de aguda necessidade financeira, Memórias do subsolo condensa um dos momentos mais importantes da literatura ocidental, reunindo vários temas que reaparecerão mais tarde nos últimos grandes romances do escritor russo."
   }
 ]
