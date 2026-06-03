@@ -444,6 +444,7 @@
     "author": "Fyodor Dostoevsky",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/memorias-do-subsolo.jpeg",
+    "isNew": true,
     "price": 20,
     "isBestseller": true,
     "synopsis": "Escrito na cabeceira de morte de sua primeira mulher, numa situação de aguda necessidade financeira, Memórias do subsolo condensa um dos momentos mais importantes da literatura ocidental, reunindo vários temas que reaparecerão mais tarde nos últimos grandes romances do escritor russo."
