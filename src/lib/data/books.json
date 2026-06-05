@@ -530,5 +530,16 @@
     "isBestseller": false,
     "synopsis": "Ecos é um romance de Pam Munoz Ryan que entrelaça as histórias de três personagens: Franny, uma jovem pianista americana; Aubrey, um garoto inglês durante a Segunda Guerra Mundial; e Melody, uma menina surda que vive em um orfanato. As vidas desses personagens se cruzam de maneiras inesperadas, explorando temas como música, guerra, família e a busca por identidade. A narrativa é rica em emoção e profundidade, oferecendo uma experiência de leitura envolvente e comovente."
   }
+ {
+    "id": "51",
+    "slug": "o-alienista",
+    "title": "O Alienista",
+    "author": "Machado de Assis",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/o-alienista.jpg",
+    "isNew": true,
+    "price": 19.90,
+    "synopsis": "O Alienista é um romance de Machado de Assis que narra a história do Dr. Simão Bacamarte, um médico que decide abrir um hospício em Itaguaí para estudar a mente humana. Ele começa a internar pessoas que considera mentalmente doentes, mas à medida que o número de pacientes cresce, questiona-se quem realmente é louco. A obra é uma crítica à sociedade e à ciência da época, explorando temas como sanidade, poder e a natureza humana com a ironia característica de Machado de Assis."
+  }
 ]
 
