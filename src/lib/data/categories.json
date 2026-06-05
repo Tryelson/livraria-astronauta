@@ -23,5 +23,15 @@
     "slug": "filosofia",
     "name": "Filosofia",
     "description": "Filosofia política, moral e pensadores clássicos."
+  },
+  {
+    "slug": "quadrinhos",
+    "name": "Quadrinhos",
+    "description": "Histórias em quadrinhos para todos os gostos."
+  },
+  {
+    "slug": "terror",
+    "name": "Terror",
+    "description": "Histórias de terror para os mais assustados."
   }
 ]
