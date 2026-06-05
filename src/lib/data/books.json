@@ -6,7 +6,7 @@
     "author": "Victor Hugo",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/os-trabalhadores-do-mar.jpeg",
-    "price": 40,
+    "price": 39.90,
     "isFeatured": true,
     "isBestseller": true,
     "synopsis": "Na costa da Bretanha, Gilliatt enfrenta o mar e a tempestade em uma prova extrema de coragem e abnegação. Um dos romances mais poderosos de Victor Hugo sobre o amor, o dever e a natureza em fúria."
@@ -18,7 +18,7 @@
     "author": "Arthur Conan Doyle",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/sherlock-holmes-6-volumes-colecao-especial.jpeg",
-    "price": 120,
+    "price": 119.90,
     "isFeatured": true,
     "isBestseller": true,
     "synopsis": "Seis volumes reunindo as investigações do detetive mais famoso da literatura, com mistérios, dedução implacável e o incomparável dr. Watson ao lado de Sherlock Holmes."
@@ -30,7 +30,7 @@
     "author": "Elisabeth Elliot",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/deixe-me-ser-mulher-elisabeth-elliot.jpeg",
-    "price": 40,
+    "price": 39.90,
     "synopsis": "Memórias e reflexões de Elisabeth Elliot sobre fé, vocação e feminilidade, escritas com honestidade e profundidade espiritual após perdas que marcaram sua vida."
   },
   {
@@ -40,7 +40,7 @@
     "author": "Alfred Lansing",
     "categorySlug": "historia",
     "coverUrl": "/livraria-images/shackleton-uma-licao-de-coragem.jpeg",
-    "price": 30,
+    "price": 29.90,
     "isFeatured": true,
     "synopsis": "A épica expedição Antártica do Endurance e a luta pela sobrevivência de Shackleton e sua tripulação. Um relato real de liderança, resistência e esperança no gelo."
   },
@@ -49,9 +49,9 @@
     "slug": "dracula",
     "title": "Drácula",
     "author": "Bram Stoker",
-    "categorySlug": "literatura",
+    "categorySlug": "terror",
     "coverUrl": "/livraria-images/bram-stoker-dracula.jpeg",
-    "price": 25,
+    "price": 24.90,
     "isBestseller": true,
     "synopsis": "O conde Drácula deixa a Transilvânia para a Inglaterra, e um grupo se une para enfrentar o mal. O romance gótico que definiu o vampiro moderno e ainda arrepia gerações."
   },
@@ -62,7 +62,7 @@
     "author": "Stendhal",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/stendhal-o-vermelho-e-o-negro.jpeg",
-    "price": 50,
+    "price": 49.90,
     "synopsis": "Julien Sorel ambiciona subir na sociedade francesa do século XIX, entre paixão, hipocrisia e revolta. Obra-prima de Stendhal sobre desejo, classe e destino."
   },
   {
@@ -72,7 +72,7 @@
     "author": "Rachel Gillig",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/duas-coroas-retorcidas-rachel-gillig.jpeg",
-    "price": 55,
+    "price": 54.90,
     "isFeatured": true,
     "synopsis": "Em um mundo de magia e mistério, duas coroas e segredos antigos colidem com o destino de quem ousa desafiar o império. Fantasia envolvente de Rachel Gillig."
   },
@@ -83,7 +83,7 @@
     "author": "Victoria Aveyard",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/a-rainha-vermelha.jpeg",
-    "price": 50,
+    "price": 49.90,
     "synopsis": "Mare Barrow vive em um reino dividido pelo sangue: vermelho comum, prateado poderoso. Uma distopia de coragem e rebelião no início da série que conquistou milhões de leitores."
   },
   {
@@ -93,7 +93,7 @@
     "author": "Machado de Assis",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/quincas-borba.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "Machado de Assis mistura sátira, filosofia e tragédia na história de Rubião e do excêntrico Quincas Borba. Um clássico brasileiro sobre ambição, loucura e humanidade."
   },
   {
@@ -103,7 +103,7 @@
     "author": "Charles Dickens",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/um-conto-de-duas-cidades.jpeg",
-    "price": 30,
+    "price": 29.90,
     "synopsis": "Paris e Londres no tempo do Terror: sacrifício, revolução e reencontros que mudam destinos. Um dos maiores romances históricos de Charles Dickens."
   },
   {
@@ -113,7 +113,7 @@
     "author": "Gregory Maguire",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/gregory-maguire-wicked-darkside.jpeg",
-    "price": 79.9,
+    "price": 79.90,
     "isFeatured": true,
     "synopsis": "A história da Bruxa Má do Oeste antes de Dorothy chegar a Oz — política, preconceito e identidade em um reimaginar cult de Gregory Maguire. Edição em capa dura."
   },
@@ -124,7 +124,7 @@
     "author": "Napoleon Hill",
     "categorySlug": "filosofia",
     "coverUrl": "/livraria-images/a-ciencia-do-sucesso.jpeg",
-    "price": 35,
+    "price": 34.90,
     "synopsis": "Princípios atemporais sobre metas, persistência e mentalidade vencedora que influenciaram gerações de empreendedores. O clássico de Napoleon Hill sobre realização pessoal."
   },
   {
@@ -132,10 +132,9 @@
     "slug": "a-menina-do-outro-lado",
     "title": "A menina do outro lado",
     "author": "Nagabe",
-    "categorySlug": "literatura",
+    "categorySlug": "quadrinhos",
     "coverUrl": "/livraria-images/a-menina-do-outro-lado-nagabe.jpeg",
-    "price": 55,
-    "isNew": true,
+    "price": 54.90,
     "synopsis": "Mangá tocante de Nagabe sobre uma menina misteriosa à beira do mundo dos vivos e dos mortos. Uma fábula visual sobre solidão, gentileza e o que nos une."
   },
   {
@@ -145,7 +144,7 @@
     "author": "Anne Frank",
     "categorySlug": "historia",
     "coverUrl": "/livraria-images/o-diario-de-anne-frank.jpeg",
-    "price": 30,
+    "price": 29.90,
     "synopsis": "O relato íntimo da adolescente judia escondida na Amsterdam ocupada. Um documento histórico comovente sobre esperança, medo e a força das palavras."
   },
   {
@@ -155,7 +154,7 @@
     "author": "Arthur Azevedo",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/a-falencia-texto-interal-questoes-de-vestibular-comentadas.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "Peça-chave do teatro brasileiro que expõe hipocrisia social e moral com humor ácido. Arthur Azevedo retrata o Rio do século XIX com naturalismo e ironia."
   },
   {
@@ -165,7 +164,7 @@
     "author": "Carlo Collodi",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/as-aventuras-de-pinoquio-historia-de-um-boneco-carlo-collodi.jpeg",
-    "price": 40,
+    "price": 39.90,
     "synopsis": "O boneco de madeira que sonha em ser menino de verdade atravessa provações, mentiras e lições de coragem. O clássico de Collodi que encanta crianças e adultos."
   },
   {
@@ -175,8 +174,7 @@
     "author": "Masaomi Kanzaki",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/kamen-rider-kuuga.jpeg",
-    "price": 45,
-    "isNew": true,
+    "price": 44.90,
     "synopsis": "Adaptação em mangá da série icônica: um herói enfrenta criaturas aterrorizantes para proteger a humanidade. Ação, mistério e o legado de Kuuga em páginas."
   },
   {
@@ -186,7 +184,7 @@
     "author": "Joseph Delaney",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/arena-13-alguns-perdem-a-vida-outros-a-alma.jpeg",
-    "price": 40,
+    "price": 39.90,
     "synopsis": "Lec vive em um mundo de combates mortais nas arenas e sonha em vencer o sistema. Ficção científica visceral de Joseph Delaney sobre sobrevivência e revolta."
   },
   {
@@ -196,7 +194,7 @@
     "author": "Franz Kafka",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/a-metamorfose-franz-kafka.jpeg",
-    "price": 20,
+    "price": 19.90,
     "synopsis": "Gregor Samsa acorda transformado em inseto e vê sua vida e sua família desmoronarem. Um dos textos mais perturbadores e influentes de Kafka sobre alienação e absurdo."
   },
   {
@@ -206,7 +204,7 @@
     "author": "Gustav Schwab",
     "categorySlug": "historia",
     "coverUrl": "/livraria-images/o-livro-de-ouro-da-mitologia-historias-de-deuses-e-herois.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "Deuses, heróis e lendas da Grécia e Roma reunidos em narrativas claras e envolventes. Um clássico para quem ama mitologia e as origens da cultura ocidental."
   },
   {
@@ -216,8 +214,7 @@
     "author": "Holly Jackson",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/manual-de-assassinato-para-boas-garotas-holly-jackson.jpeg",
-    "price": 45,
-    "isNew": true,
+    "price": 44.90,
     "synopsis": "Pippa Fitz-Amobi reinvestiga um caso de assassinato em sua cidade e grava um podcast que pode expor a verdade — ou colocá-la em perigo. Thriller juvenil de Holly Jackson."
   },
   {
@@ -227,7 +224,7 @@
     "author": "Graciliano Ramos",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/vidas-secas.jpeg",
-    "price": 20,
+    "price": 19.90,
     "synopsis": "A seca castiga o sertão e esmaga Fabiano, Sinhá Vitória e os filhos na luta pela sobrevivência. Obra-prima de Graciliano Ramos sobre miséria e dignidade."
   },
   {
@@ -237,7 +234,7 @@
     "author": "Frances Hodgson Burnett",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/o-jardim-secreto.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "Mary Lennox descobre um jardim encerrado e, aos poucos, floresce junto com ele. Um clássico sobre infância, amizade e a força transformadora da natureza."
   },
   {
@@ -247,7 +244,7 @@
     "author": "Emily Brontë",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/o-morro-dos-ventos-uivantes-emily-bronte.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "Paixão destrutiva entre Heathcliff e Catherine nos ermos da Inglaterra. Romance gótico intenso de Emily Brontë sobre amor, vingança e obsessão."
   },
   {
@@ -257,7 +254,7 @@
     "author": "Jane Austen",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/jane-austen-orgulho-e-preconceito.jpeg",
-    "price": 25,
+    "price": 24.90,
     "isBestseller": true,
     "synopsis": "Elizabeth Bennet e Mr. Darcy atravessam mal-entendidos, ironia e convenções sociais. O romance mais amado de Jane Austen sobre amor e juízo."
   },
@@ -266,9 +263,9 @@
     "slug": "o-medico-e-o-monstro",
     "title": "O médico e o monstro",
     "author": "Robert Louis Stevenson",
-    "categorySlug": "literatura",
+    "categorySlug": "terror",
     "coverUrl": "/livraria-images/o-medico-e-o-monstro.jpeg",
-    "price": 20,
+    "price": 19.90,
     "synopsis": "O dr. Jekyll liberta o lado monstruoso de sua personalidade em uma Londres sombria. O clássico de Stevenson que definiu o duplo na literatura."
   },
   {
@@ -278,7 +275,7 @@
     "author": "Antoine de Saint-Exupéry",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/o-pequeno-principe-com-aquarelas-do-autor-antoine-de-saint-exupery.jpeg",
-    "price": 30,
+    "price": 29.90,
     "isBestseller": true,
     "synopsis": "Um aviador perdido no deserto encontra um pequeno príncipe de outro planeta e redescobre o essencial da vida. Poético, delicado e atemporal."
   },
@@ -289,7 +286,7 @@
     "author": "Fiódor Dostoiévski",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/crime-e-castigo-fiodor-dostoievski.jpeg",
-    "price": 25,
+    "price": 24.90,
     "isBestseller": true,
     "synopsis": "Raskólnikov comete um assassinato e mergulha em angústia moral e psicológica. Dostoiévski em obra magistral sobre culpa, fé e redenção."
   },
@@ -300,7 +297,7 @@
     "author": "Júlio Verne",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/a-volta-ao-mundo-em-80-dias-julio-verne.jpeg",
-    "price": 25,
+    "price": 24.90,
     "isBestseller": true,
     "synopsis": "Phileas Fogg aposta que dá a volta ao planeta em oitenta dias — trem, navio e elefante numa corrida contra o tempo. Aventura clássica de Júlio Verne."
   },
@@ -311,7 +308,7 @@
     "author": "William Shakespeare",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/william-shakespeare-macbeth.jpeg",
-    "price": 20,
+    "price": 19.90,
     "synopsis": "Ambição, profecias e culpa destroem um guerreiro e um reino. A tragédia shakespeariana sobre o preço do poder, em linguagem intensa e inesquecível."
   },
   {
@@ -319,9 +316,9 @@
     "slug": "girl-crush-manga",
     "title": "Girl Crush mangá",
     "author": "Midori Tryane",
-    "categorySlug": "literatura",
+    "categorySlug": "quadrinhos",
     "coverUrl": "/livraria-images/girl-crush-midori-tryane.jpeg",
-    "price": 35,
+    "price": 34.90,
     "synopsis": "Romance e drama em formato mangá: sentimentos intensos, mal-entendidos e descobertas do coração. Uma leitura envolvente para quem ama histórias em quadrinhos japonesas."
   },
   {
@@ -331,7 +328,7 @@
     "author": "Kristin Hannah",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/kristin-hannah-tempo-de-regresso.jpeg",
-    "price": 40,
+    "price": 39.90,
     "synopsis": "Kristin Hannah narra memória, família e segundas chances diante de perdas e recomeços. Um romance emocionante sobre o tempo que cura — e o que não volta."
   },
   {
@@ -341,7 +338,7 @@
     "author": "Miguel de Cervantes",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/dom-quixote-miguel-de-cervantes.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "O cavaleiro da triste figura e Sancho Panza atravessam a Espanha lutando contra moinhos e sonhos. A obra fundadora do romance moderno, cômica e profunda."
   },
   {
@@ -351,7 +348,7 @@
     "author": "Kiera Cass",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/a-coroa-livro-5-da-serie-a-selecao-kiera-cass.jpeg",
-    "price": 39.9,
+    "price": 39.90,
     "isFeatured": true,
     "synopsis": "O desfecho da série A Seleção: tronos, corações e escolhas finais no mundo de Kiera Cass. Quem será a rainha — e a quem pertencerá o amor verdadeiro?"
   },
@@ -362,7 +359,7 @@
     "author": "Anne Frank",
     "categorySlug": "historia",
     "coverUrl": "/livraria-images/o-diario-de-anne-frank-garnier.jpeg",
-    "price": 50,
+    "price": 49.90,
     "synopsis": "Edição de luxo do diário que marcou o século XX, com acabamento especial para colecionadores e leitores que desejam guardar este testemunho com cuidado."
   },
   {
@@ -372,7 +369,7 @@
     "author": "Nicholas Sparks",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/querido-john.jpeg",
-    "price": 40,
+    "price": 39.90,
     "synopsis": "Amor e distância se entrelaçam quando um soldado e uma jovem se correspondem. Nicholas Sparks em história sobre escolhas, saudade e o peso do destino."
   },
   {
@@ -382,7 +379,7 @@
     "author": "Bernardo Guimarães",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/o-seminarista-bernardo-guimaraes.jpeg",
-    "price": 20,
+    "price": 19.90,
     "synopsis": "Romance do século XIX em que fé, paixão e convenções sociais se chocam no Brasil imperial. Bernardo Guimarães entre o melodrama e a crítica moral."
   },
   {
@@ -392,7 +389,7 @@
     "author": "Vários",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/biblia-infantil.jpeg",
-    "price": 30,
+    "price": 29.90,
     "synopsis": "Grandes histórias bíblicas contadas com linguagem acessível e ilustrações para aproximar crianças das narrativas de fé, coragem e esperança."
   },
   {
@@ -402,7 +399,7 @@
     "author": "Arthur Conan Doyle",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/sherlock-holmes-um-estudo-em-vermelho.jpeg",
-    "price": 30,
+    "price": 29.90,
     "isBestseller": true,
     "synopsis": "O primeiro caso de Sherlock Holmes: um mistério de sangue em Londres que apresenta o detetive e seu método. O ponto de partida perfeito para a saga."
   },
@@ -413,7 +410,7 @@
     "author": "Philippe Muray",
     "categorySlug": "conservadorismo",
     "coverUrl": "/livraria-images/philippe-muray-o-imperio-do-bem.jpeg",
-    "price": 25,
+    "price": 24.90,
     "synopsis": "Ensaio provocador sobre a moralidade contemporânea, o politicamente correto e os limites da tolerância. Philippe Muray discute cultura e poder com ironia afiada."
   },
   {
@@ -423,7 +420,7 @@
     "author": "P. G. Wodehouse",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/porco-de-raça.jpeg",
-    "price": 50,
+    "price": 49.90,
     "synopsis": "Comédia refinada de P. G. Wodehouse na mansão Blandings: porcos de exposição, tios excêntricos e planos que dão errado de forma deliciosa. Capa dura."
   },
   {
@@ -433,7 +430,7 @@
     "author": "William Shakespeare",
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/romeu-e-julieta.jpeg",
-    "price": 20,
+    "price": 19.90,
     "isBestseller": true,
     "synopsis": "Dois jovens amantes desafiam famílias rivais em Verona — paixão instantânea e destino trágico. A tragédia universal de Shakespeare sobre amor e ódio."
   },
@@ -445,8 +442,93 @@
     "categorySlug": "literatura",
     "coverUrl": "/livraria-images/memorias-do-subsolo.webp",
     "isNew": true,
-    "price": 20,
+    "price": 19.90,
     "isBestseller": true,
     "synopsis": "Escrito na cabeceira de morte de sua primeira mulher, numa situação de aguda necessidade financeira, Memórias do subsolo condensa um dos momentos mais importantes da literatura ocidental, reunindo vários temas que reaparecerão mais tarde nos últimos grandes romances do escritor russo."
+  },
+ {
+    "id": "44",
+    "slug": "invencivel-vol1",
+    "title": "Invencível, vol. 1",
+    "author": "Robert Kirkman",
+    "categorySlug": "quadrinhos",
+    "coverUrl": "/livraria-images/invencivel-vol1.jpeg",
+    "isNew": true,
+    "price": 24.90,
+    "isBestseller": false,
+    "synopsis": "A história de Invincible (Invencível) acompanha Mark Grayson, um adolescente que descobre ter herdado os superpoderes de seu pai, Nolan Grayson (Omni-Man), o herói mais poderoso da Terra. "
+  },
+ {
+    "id": "45",
+    "slug": "os-fabulosos-x-men-vol1",
+    "title": "Os Fabulosos X-Men, vol. 1",
+    "author": "Mackay Stegman",
+    "categorySlug": "quadrinhos",
+    "coverUrl": "/livraria-images/os-fabulosos-x-men-vol1.jpeg",
+    "isNew": true,
+    "price": 24.90,
+    "isBestseller": false,
+    "synopsis": "Krakoa se foi, a Orchis caiu... mas os X-Men permanecem, sempre. Ciclope lidera, porque é isso que ele faz. Fera constrói, porque é isso que ele faz. E de seu novo lar no Alasca, os X-Men erguem uma bandeira de desafio. Eles são mutantes."
+  },
+ {
+    "id": "46",
+    "slug": "wolverine-vol1",
+    "title": "Wolverine, vol. 1",
+    "author": "Ahmed Coccolo",
+    "categorySlug": "quadrinhos",
+    "coverUrl": "/livraria-images/wolverine-vol1.jpeg",
+    "isNew": true,
+    "price": 24.90,
+    "isBestseller": false,
+    "synopsis": "Após a Era de Krakoa... das cinzas, um novo início! Algo espreita nas gélidas florestas do Canadá. Wolverine não consegue ter paz, e surge um novo vilão que levará Logan aos limites de sua fúria arrebatadora."
+  },
+{
+    "id": "47",
+    "slug": "spawn-origens-vol1",
+    "title": "Spawn: Origens, vol. 1",
+    "author": "Todd McFarlane",
+    "categorySlug": "quadrinhos",
+    "coverUrl": "/livraria-images/spawn-origens-vol1.jpeg",
+    "isNew": true,
+    "price": 29.90,
+    "isBestseller": false,
+    "synopsis": "Neste primeiro volume de SPAWN ORIGENS você terá a oportunidade de ler (ou reler) o início a saga de um dos personagens mais adorados pelos fãs desde que começou a ser publicado nos EUA em 1992, iniciando uma verdadeira revolução na indústria dos quadrinhos."
+  },
+{
+    "id": "48",
+    "slug": "saboroso-cadaver",
+    "title": "Saboroso Cadáver",
+    "author": "Agustina Bazterrica",
+    "categorySlug": "terror",
+    "coverUrl": "/livraria-images/saboroso-cadaver.jpeg",
+    "isNew": true,
+    "price": 49.90,
+    "isBestseller": true,
+    "synopsis": "Em um futuro distópico, a humanidade enfrenta uma crise de superpopulação e escassez de alimentos. Para resolver o problema, o governo institui a prática de canibalismo, onde os corpos dos mortos são processados e vendidos como carne. A história acompanha Marcos, um funcionário de um matadouro que lida com as consequências morais e emocionais dessa realidade sombria."
+  },
+  {
+    "id": "49",
+    "slug": "noites-brancas",
+    "title": "Noites Brancas",
+    "author": "Fiódor Dostoevsky",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/noites-brancas.jpeg",
+    "isNew": true,
+    "price": 19.90,
+    "isBestseller": true,
+    "synopsis": "Noites Brancas é uma novela de Fiódor Dostoevsky que narra a história de um jovem solitário que vive em São Petersburgo. Durante quatro noites, ele encontra uma jovem chamada Nastenka e desenvolve um relacionamento intenso e emocional com ela. A obra explora temas como amor, solidão e a busca por conexão humana, tudo ambientado na atmosfera melancólica da cidade durante as noites brancas, quando o sol quase não se põe."
+  },
+ {
+    "id": "50",
+    "slug": "ecos",
+    "title": "Ecos",
+    "author": "Pam Munoz Ryan",
+    "categorySlug": "literatura",
+    "coverUrl": "/livraria-images/ecos.webp",
+    "isNew": true,
+    "price": 44.90,
+    "isBestseller": false,
+    "synopsis": "Ecos é um romance de Pam Munoz Ryan que entrelaça as histórias de três personagens: Franny, uma jovem pianista americana; Aubrey, um garoto inglês durante a Segunda Guerra Mundial; e Melody, uma menina surda que vive em um orfanato. As vidas desses personagens se cruzam de maneiras inesperadas, explorando temas como música, guerra, família e a busca por identidade. A narrativa é rica em emoção e profundidade, oferecendo uma experiência de leitura envolvente e comovente."
   }
 ]
+

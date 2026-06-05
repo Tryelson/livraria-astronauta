@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BookOpen, Brain, Landmark, ScrollText, Sparkles } from "lucide-react";
+import { BookOpen, Brain, Ghost, Landmark, ScrollText, Sparkles, Zap } from "lucide-react";
 
 export type CategoryTheme = {
   icon: LucideIcon;
@@ -11,6 +11,8 @@ export const CATEGORY_THEMES: Record<string, CategoryTheme> = {
   conservadorismo: { icon: Landmark },
   historia: { icon: ScrollText },
   filosofia: { icon: Brain },
+  quadrinhos: { icon: Zap },
+  terror: { icon: Ghost },
 };
 
 export function getCategoryTheme(slug: string): CategoryTheme {

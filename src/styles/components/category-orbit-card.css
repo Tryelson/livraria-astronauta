@@ -59,6 +59,14 @@
   --orbit-accent: oklch(0.75 0.1 300);
 }
 
+.category-orbit-card--quadrinhos {
+  --orbit-accent: oklch(0.68 0.25 255);
+}
+
+.category-orbit-card--terror {
+  --orbit-accent: oklch(0.14 0.20 40);
+}
+
 .category-orbit-card__ring {
   position: absolute;
   top: 50%;
